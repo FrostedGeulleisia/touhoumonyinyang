@@ -276,9 +276,12 @@
 #define SE_PIKE_CURTAIN_CLOSE       267 // SE_CURTAIN
 #define SE_PIKE_CURTAIN_OPEN        268 // SE_CURTAIN1
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
+#define END_SE                      SE_SUDOWOODO_SHAKE
 
 // Music
 #define MUS_VS_TEST                 350 // MUS_BATTEST
+#define START_MUS                   350
+#define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI
 #define MUS_GSC_ROUTE38             351 // MUS_FIELD13
 #define MUS_CAUGHT                  352 // MUS_KACHI22
 #define MUS_VICTORY_WILD            353 // MUS_KACHI2
@@ -488,6 +491,7 @@
 #define MUS_RG_TRAINER_TOWER        556 // MUS_RG_T_TOWER
 #define MUS_RG_SLOW_PALLET          557 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
+#define END_MUS                     MUS_RG_TEACHY_TV_MENU
 
 #define PH_TRAP_BLEND               559
 #define PH_TRAP_HELD                560
