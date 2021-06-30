@@ -9,9 +9,36 @@ To set up the repository, see [INSTALL.md](INSTALL.md).
 
 ## Credits
 
+# Project Organization
+
+* FrostedGeulleisia
+
+# Planning
+
+* ShimmeringMizuko
+
+# Spriters
+
 TODO
 
+# Composers
 
+TODO
+
+# [Debug Menus](https://github.com/TheXaman/pokeemerald/tree/tx_debug_system)
+
+* TheXaman
+* Ketsuban
+* Pyredrid
+* AsparagusEduardo
+* Ghoulslash
+* exposneed
+
+# Special Thanks
+
+* Tye and Aichiya Sanae for providing us with most original MIDIs used in 1.8, World Link, and Another World.
+* Faith120, for their [**Emerald-based Touhou Puppet Play base**](https://github.com/Fatih120/thpuppetplay2).
+* AGSMG64, for sending us rips of cries from 1.8, World Link Deluxe, and ReimuFate, as well as sprites from World Link Deluxe.
 
 ## See also
 
