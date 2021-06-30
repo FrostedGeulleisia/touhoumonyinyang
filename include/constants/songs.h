@@ -278,7 +278,7 @@
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
 
 // Music
-#define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI
+#define MUS_VS_TEST                 350 // MUS_BATTEST
 #define MUS_GSC_ROUTE38             351 // MUS_FIELD13
 #define MUS_CAUGHT                  352 // MUS_KACHI22
 #define MUS_VICTORY_WILD            353 // MUS_KACHI2
