@@ -370,7 +370,7 @@ static const u8 gDebugText_Give_MaxMoney[] =            _("Max Money");
 static const u8 gDebugText_Give_MaxCoins[] =            _("Max Coins");
 static const u8 gDebugText_Give_DaycareEgg[] =          _("Daycare Egg");
 static const u8 gDebugText_Give_FillPc[] =              _("Fill Pc");
-static const u8 gDebugText_Give_GiveCHEAT[] =           _("CHEAT Start");
+static const u8 gDebugText_Give_GiveCHEAT[] =           _("Funny meme option");
 // static const u8 gDebugText_Give_AccessPC[] =         _("Access PC");
 // Sound Mneu
 static const u8 gDebugText_Sound_SE[] =                 _("Effects");
@@ -2659,19 +2659,20 @@ static void DebugAction_Give_FillPC(u8 taskId) //Credit: Sierraffinity
 
     personality = Random32();
 
-    CreateBoxMon(&boxMon,
-                 SPECIES_DEOXYS,
-                 100,
-                 32,
-                 personality,
-                 0,
-                 OT_ID_PLAYER_ID,
-                 0);
 
+//void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId)
     for (boxId = 0; boxId < TOTAL_BOXES_COUNT; boxId++)
     {
         for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
         {
+			CreateBoxMon(&boxMon,
+			    Random() % NUM_SPECIES,
+                Random() % 100,
+                Random() % 255,
+                0,
+                Random() % 3,
+                OT_ID_PLAYER_ID,
+                Random32());
             if (!GetBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition], MON_DATA_SANITY_HAS_SPECIES))
             {
                 gPokemonStoragePtr->boxes[boxId][boxPosition] = boxMon;
@@ -2854,7 +2855,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
 }
 
 #define SOUND_LIST_BGM \
-    X(MUS_LITTLEROOT_TEST, "MUS-LITTLEROOT-TEST") \
+    X(MUS_VS_TEST, "MUS-VS-TEST") \
     X(MUS_GSC_ROUTE38, "MUS-GSC-ROUTE38") \
     X(MUS_CAUGHT, "MUS-CAUGHT") \
     X(MUS_VICTORY_WILD, "MUS-VICTORY-WILD") \
