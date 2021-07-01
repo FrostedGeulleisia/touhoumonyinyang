@@ -1510,19 +1510,6 @@ static u8 CheckValidityOfTradeMons(u8 *aliveMons, u8 playerPartyCount, u8 player
     partnerMonIdx %= PARTY_SIZE;
     partnerSpecies = GetMonData(&gEnemyParty[partnerMonIdx], MON_DATA_SPECIES);
 
-    // Partner cant trade illegitimate Deoxys or Mew
-    if (partnerSpecies == SPECIES_DEOXYS || partnerSpecies == SPECIES_MEW)
-    {
-        if (!GetMonData(&gEnemyParty[partnerMonIdx], MON_DATA_EVENT_LEGAL))
-            return PARTNER_MON_INVALID;
-    }
-
-    // Partner cant trade Egg or non-Hoenn mon if player doesn't have National Dex
-    if (!IsNationalPokedexEnabled())
-    {
-        if (sTradeMenuData->isEgg[TRADE_PARTNER][partnerMonIdx] || !IsSpeciesInHoennDex(partnerSpecies))
-            return PARTNER_MON_INVALID;
-    }
 
     if (hasLiveMon)
         hasLiveMon = BOTH_MONS_VALID;
@@ -2342,36 +2329,6 @@ static u32 CanTradeSelectedMon(struct Pokemon *playerParty, int partyCount, int 
         species[i] = GetMonData(&playerParty[i], MON_DATA_SPECIES);
     }
 
-    // Cant trade Eggs or non-Hoenn mons if player doesn't have National Dex
-    if (!IsNationalPokedexEnabled())
-    {
-        if (species2[monIdx] == SPECIES_EGG)
-            return CANT_TRADE_EGG_YET;
-
-        if (!IsSpeciesInHoennDex(species2[monIdx]))
-            return CANT_TRADE_NATIONAL;
-    }
-
-    player = &gLinkPlayers[GetMultiplayerId() ^ 1];
-    if ((player->version & 0xFF) != VERSION_RUBY &&
-        (player->version & 0xFF) != VERSION_SAPPHIRE)
-    {
-        // Does partner not have National Dex
-        if (!(player->progressFlagsCopy & 0xF))
-        {
-            if (species2[monIdx] == SPECIES_EGG)
-                return CANT_TRADE_EGG_YET2;
-
-            if (!IsSpeciesInHoennDex(species2[monIdx]))
-                return CANT_TRADE_INVALID_MON;
-        }
-    }
-
-    if (species[monIdx] == SPECIES_DEOXYS || species[monIdx] == SPECIES_MEW)
-    {
-        if (!GetMonData(&playerParty[monIdx], MON_DATA_EVENT_LEGAL))
-            return CANT_TRADE_INVALID_MON;
-    }
 
     // Make Eggs not count for numMonsLeft
     for (i = 0; i < partyCount; i++)
@@ -2409,27 +2366,6 @@ s32 GetGameProgressForLinkTrade(void)
             isGameFrLg = 0;
         else if (version == VERSION_FIRE_RED || version == VERSION_LEAF_GREEN)
             isGameFrLg = 2;
-
-        // If trading with FRLG, both players must be champion
-        if (isGameFrLg > 0)
-        {
-            // Is player champion
-            if (gLinkPlayers[GetMultiplayerId()].progressFlagsCopy & 0xF0)
-            {
-                if (isGameFrLg == 2) //unnecessary check, isGameFrLg always 2 here
-                {
-                    // Is partner champion
-                    if (gLinkPlayers[GetMultiplayerId() ^ 1].progressFlagsCopy & 0xF0)
-                        return TRADE_BOTH_PLAYERS_READY;
-                    else
-                        return TRADE_PARTNER_NOT_READY;
-                }
-            }
-            else
-            {
-                return TRADE_PLAYER_NOT_READY;
-            }
-        }
     }
     return TRADE_BOTH_PLAYERS_READY;
 }
