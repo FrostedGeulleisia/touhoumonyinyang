@@ -2372,11 +2372,6 @@ s32 GetGameProgressForLinkTrade(void)
 
 static bool32 IsDeoxysOrMewUntradable(u16 species, bool8 isEventLegal)
 {
-    if (species == SPECIES_DEOXYS || species == SPECIES_MEW)
-    {
-        if (!isEventLegal)
-            return TRUE;
-    }
     return FALSE;
 }
 
