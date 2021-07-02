@@ -295,14 +295,14 @@ static const u8 gDebugText_Give[] =             _("Give X");
 static const u8 gDebugText_Sound[] =            _("Sound");
 static const u8 gDebugText_Cancel[] =           _("Cancel");
 // Script menu
-static const u8 gDebugText_Util_Script_1[] =               _("Script 1");
-static const u8 gDebugText_Util_Script_2[] =               _("Script 2");
-static const u8 gDebugText_Util_Script_3[] =               _("Script 3");
-static const u8 gDebugText_Util_Script_4[] =               _("Script 4");
-static const u8 gDebugText_Util_Script_5[] =               _("Script 5");
-static const u8 gDebugText_Util_Script_6[] =               _("Script 6");
-static const u8 gDebugText_Util_Script_7[] =               _("Script 7");
-static const u8 gDebugText_Util_Script_8[] =               _("Script 8");
+static const u8 gDebugText_Util_Script_1[] =               _("Give Debug Items");
+static const u8 gDebugText_Util_Script_2[] =               _("Give Balls (1)");
+static const u8 gDebugText_Util_Script_3[] =               _("Give Balls (2)");
+static const u8 gDebugText_Util_Script_4[] =               _("Dummy");
+static const u8 gDebugText_Util_Script_5[] =               _("Dummy");
+static const u8 gDebugText_Util_Script_6[] =               _("Dummy");
+static const u8 gDebugText_Util_Script_7[] =               _("Dummy");
+static const u8 gDebugText_Util_Script_8[] =               _("Dummy");
 // Util Menu
 static const u8 gDebugText_Util_HealParty[] =               _("Heal Party");
 static const u8 gDebugText_Util_Fly[] =                     _("Fly to map");
@@ -347,7 +347,7 @@ static const u8 gDebugText_Vars_VariableValueSet[] =        _("Var: {STR_VAR_1} 
 static const u8 gDebugText_Give_GiveItem[] =            _("Give item XXXX");
 static const u8 gDebugText_ItemQuantity[] =             _("Quantity:       \n{STR_VAR_1}    \n\n{STR_VAR_2}");
 static const u8 gDebugText_ItemID[] =                   _("Item Id: {STR_VAR_3}\n{STR_VAR_1}    \n\n{STR_VAR_2}");
-static const u8 gDebugText_Give_AllTMs[] =              _("Give all TMs");
+static const u8 gDebugText_Give_AllTMs[] =              _("Give all TMs/HMs");
 static const u8 gDebugText_Give_GivePokemonSimple[] =   _("Pkm(lvl)");
 static const u8 gDebugText_Give_GivePokemonComplex[] =  _("Pkm(l,s,n,a,IV,mov)");
 static const u8 gDebugText_PokemonID[] =                _("Species: {STR_VAR_3}\n{STR_VAR_1}    \n\n{STR_VAR_2}");
@@ -1824,6 +1824,9 @@ static void DebugAction_Give_AllTMs(u8 taskId)
     u16 i;
     PlayFanfare(MUS_OBTAIN_TMHM);
     for (i = ITEM_TM01; i <= ITEM_TM50; i++)
+        if(!CheckBagHasItem(i, 1))
+            AddBagItem(i, 99);
+	for (i = ITEM_HM01; i <= ITEM_HM08; i++)
         if(!CheckBagHasItem(i, 1))
             AddBagItem(i, 1);
     Debug_DestroyMenu(taskId);
