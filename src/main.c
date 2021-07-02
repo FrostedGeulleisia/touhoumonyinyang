@@ -30,6 +30,7 @@ static void HBlankIntr(void);
 static void VCountIntr(void);
 static void SerialIntr(void);
 static void IntrDummy(void);
+static void SeedRngWithRtc(void);
 
 const u8 gGameVersion = GAME_VERSION;
 
@@ -103,9 +104,7 @@ void AgbMain()
     CheckForFlashMemory();
     InitMainCallbacks();
     InitMapMusic();
-#ifdef BUGFIX
     SeedRngWithRtc(); // see comment at SeedRngWithRtc definition below
-#endif
     ClearDma3Requests();
     ResetBgs();
     SetDefaultFontsPointer();
@@ -217,14 +216,12 @@ void EnableVCountIntrAtLine150(void)
 }
 
 // FRLG commented this out to remove RTC, however Emerald didn't undo this!
-#ifdef BUGFIX
 static void SeedRngWithRtc(void)
 {
     u32 seed = RtcGetMinuteCount();
     seed = (seed >> 16) ^ (seed & 0xFFFF);
     SeedRng(seed);
 }
-#endif
 
 void InitKeys(void)
 {
@@ -401,9 +398,7 @@ static void IntrDummy(void)
 static void WaitForVBlank(void)
 {
     gMain.intrCheck &= ~INTR_FLAG_VBLANK;
-
-    while (!(gMain.intrCheck & INTR_FLAG_VBLANK))
-        ;
+    VBlankIntrWait();
 }
 
 void SetTrainerHillVBlankCounter(u32 *counter)
