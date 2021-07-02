@@ -2,7 +2,7 @@
 
 *(yes i know this's just a modified pokeemerald readme)*
 
-A work-in-progress project to re-make Touhoumon Puppet Play 1.8 using a modified pokeemerald base and improve on it.
+A Touhoumon-series romhack based on a modified fork of the Pokémon Emerald engine.
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
@@ -18,7 +18,7 @@ To set up the repository, see [INSTALL.md](INSTALL.md).
 * FrostedGeulleisia
 * Zeta-Patchouli
 
-## Planning
+## Planning, original idea
 
 * ShimmeringMizuko
 
@@ -44,6 +44,8 @@ AGSMG64
 * Tye and Aichiya Sanae for providing us with most original MIDIs used in 1.8, World Link, and Another World.
 * Faith120, for their [**Emerald-based Touhou Puppet Play base**](https://github.com/Fatih120/thpuppetplay2).
 * AGSMG64, for sending us rips of cries from 1.8, World Link Deluxe, and ReimuFate, as well as sprites from World Link Deluxe.
+* HemoglobinA1C, for making the original Touhou Puppet Play hacks. Without them, this wouldn't exist either.
+* Aichiya Sanae, for 1.8 Enhanced, which got me into Touhoumon in the first place.
 
 ## See also
 
