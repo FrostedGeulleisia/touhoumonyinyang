@@ -7,25 +7,30 @@ A work-in-progress project to re-make Touhoumon Puppet Play 1.8 using a modified
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
 
-## Credits
+# Credits
 
-# Project Organization
+## Project Organization
 
 * FrostedGeulleisia
 
-# Planning
+## Code-based Work
+
+* FrostedGeulleisia
+* Zeta-Patchouli
+
+## Planning
 
 * ShimmeringMizuko
 
-# Spriters
+## Spriters
 
 TODO
 
-# Composers
+## Composers
 
-TODO
+AGSMG64
 
-# [Debug Menus](https://github.com/TheXaman/pokeemerald/tree/tx_debug_system)
+## [Debug Menus](https://github.com/TheXaman/pokeemerald/tree/tx_debug_system)
 
 * TheXaman
 * Ketsuban
