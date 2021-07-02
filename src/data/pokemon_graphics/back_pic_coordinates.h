@@ -5,32 +5,32 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = 0x88,
         .y_offset = 0,
     },
-    [SPECIES_BULBASAUR] =
+    [SPECIES_CHIBI_SANAE] =
     {
         .size = 0x75,
         .y_offset = 13,
     },
-    [SPECIES_IVYSAUR] =
+    [SPECIES_SANAE] =
     {
         .size = 0x87,
         .y_offset = 9,
     },
-    [SPECIES_VENUSAUR] =
+    [SPECIES_CHIBI_ALICE] =
     {
         .size = 0x86,
         .y_offset = 10,
     },
-    [SPECIES_CHARMANDER] =
+    [SPECIES_ALICE] =
     {
         .size = 0x66,
         .y_offset = 9,
     },
-    [SPECIES_CHARMELEON] =
+    [SPECIES_CHIBI_REISEN] =
     {
         .size = 0x76,
         .y_offset = 8,
     },
-    [SPECIES_CHARIZARD] =
+    [SPECIES_REISEN] =
     {
         .size = 0x88,
         .y_offset = 1,

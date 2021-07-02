@@ -1,13 +1,13 @@
 #define FORM_SPECIES_END (0xffff)
 
 static const u16 sVenusaurFormSpeciesIdTable[] = {
-    SPECIES_VENUSAUR,
+    SPECIES_CHIBI_ALICE,
     SPECIES_VENUSAUR_MEGA,
     FORM_SPECIES_END,
 };
 
 static const u16 sCharizardFormSpeciesIdTable[] = {
-    SPECIES_CHARIZARD,
+    SPECIES_REISEN,
     SPECIES_CHARIZARD_MEGA_X,
     SPECIES_CHARIZARD_MEGA_Y,
     FORM_SPECIES_END,

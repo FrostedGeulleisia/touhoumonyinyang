@@ -1,7 +1,7 @@
 const u16 *const gFormSpeciesIdTables[NUM_SPECIES] =
 {
-    [SPECIES_VENUSAUR] = sVenusaurFormSpeciesIdTable,
-    [SPECIES_CHARIZARD] = sCharizardFormSpeciesIdTable,
+    [SPECIES_CHIBI_ALICE] = sVenusaurFormSpeciesIdTable,
+    [SPECIES_REISEN] = sCharizardFormSpeciesIdTable,
     [SPECIES_BLASTOISE] = sBlastoiseFormSpeciesIdTable,
     [SPECIES_BEEDRILL] = sBeedrillFormSpeciesIdTable,
     [SPECIES_PIDGEOT] = sPidgeotFormSpeciesIdTable,

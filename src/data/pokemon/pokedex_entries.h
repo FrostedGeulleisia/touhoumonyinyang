@@ -12,7 +12,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_BULBASAUR] =
+    [NATIONAL_DEX_CHIBI_SANAE] =
     {
         .categoryName = _("Seed"),
         .height = 7,
@@ -24,7 +24,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_IVYSAUR] =
+    [NATIONAL_DEX_SANAE] =
     {
         .categoryName = _("Seed"),
         .height = 10,
@@ -36,7 +36,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_VENUSAUR] =
+    [NATIONAL_DEX_CHIBI_ALICE] =
     {
         .categoryName = _("Seed"),
         .height = 20,
@@ -48,7 +48,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 6,
     },
 
-    [NATIONAL_DEX_CHARMANDER] =
+    [NATIONAL_DEX_ALICE] =
     {
         .categoryName = _("Lizard"),
         .height = 6,
@@ -60,7 +60,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_CHARMELEON] =
+    [NATIONAL_DEX_CHIBI_REISEN] =
     {
         .categoryName = _("Flame"),
         .height = 11,
@@ -72,7 +72,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = 0,
     },
 
-    [NATIONAL_DEX_CHARIZARD] =
+    [NATIONAL_DEX_REISEN] =
     {
         .categoryName = _("Flame"),
         .height = 17,

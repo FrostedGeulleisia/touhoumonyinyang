@@ -471,7 +471,7 @@ static const u8 sBideDescription[] = _(
 
 static const u8 sMetronomeDescription[] = _(
     "Waggles a finger to use any\n"
-    "Pokémon move at random.");
+    "Puppet move at random.");
 
 static const u8 sMirrorMoveDescription[] = _(
     "Counters the foe's attack\n"
@@ -778,7 +778,7 @@ static const u8 sDestinyBondDescription[] = _(
     "is also made to faint.");
 
 static const u8 sPerishSongDescription[] = _(
-    "Any Pokémon hearing this\n"
+    "Any Puppet hearing this\n"
     "song faints in 3 turns.");
 
 static const u8 sIcyWindDescription[] = _(
@@ -1002,7 +1002,7 @@ static const u8 sWhirlpoolDescription[] = _(
     "a whirlpool for 2 to 5 turns.");
 
 static const u8 sBeatUpDescription[] = _(
-    "Summons party Pokémon to\n"
+    "Summons party Puppets to\n"
     "join in the attack.");
 
 static const u8 sFakeOutDescription[] = _(
@@ -1170,7 +1170,7 @@ static const u8 sArmThrustDescription[] = _(
     "strike the foe 2 to 5 times.");
 
 static const u8 sCamouflageDescription[] = _(
-    "Alters the Pokémon's type\n"
+    "Alters the Puppet's type\n"
     "depending on the location.");
 
 static const u8 sTailGlowDescription[] = _(
@@ -1190,7 +1190,7 @@ static const u8 sFeatherDanceDescription[] = _(
     "to sharply reduce Attack.");
 
 static const u8 sTeeterDanceDescription[] = _(
-    "Confuses all Pokémon on\n"
+    "Confuses all Puppets on\n"
     "the scene.");
 
 static const u8 sBlazeKickDescription[] = _(
@@ -1718,7 +1718,7 @@ static const u8 sDEFOGDescription[] = _(
     "lowers evasion.");
 
 static const u8 sTRICK_ROOMDescription[] = _(
-    "Slower Pokémon get to move\n"
+    "Slower Puppets get to move\n"
     "first for 5 turns.");
 
 static const u8 sDRACO_METEORDescription[] = _(
@@ -2183,7 +2183,7 @@ static const u8 sBELCHDescription[] = _(
 
 static const u8 sROTOTILLERDescription[] = _(
     "Ups the Attack and Sp. Atk\n"
-    "of Grass-type Pokémon.");
+    "of Grass-type Puppets.");
 
 static const u8 sSTICKY_WEBDescription[] = _(
     "Weaves a sticky net that\n"
@@ -2206,7 +2206,7 @@ static const u8 sION_DELUGEDescription[] = _(
     "moves with charged atoms.");
 
 static const u8 sPARABOLIC_CHARGEDescription[] = _(
-    "Damages adjacent Pokémon and\n"
+    "Damages adjacent Puppets and\n"
     "heals up by half of it.");
 
 static const u8 sFORESTS_CURSEDescription[] = _(
@@ -2243,7 +2243,7 @@ static const u8 sCRAFTY_SHIELDDescription[] = _(
 
 static const u8 sFLOWER_SHIELDDescription[] = _(
     "Raises the Defense of\n"
-    "Grass-type Pokémon.");
+    "Grass-type Puppets.");
 
 static const u8 sGRASSY_TERRAINDescription[] = _(
     "The ground turns to grass\n"
@@ -2315,7 +2315,7 @@ static const u8 sSPIKY_SHIELDDescription[] = _(
 
 static const u8 sAROMATIC_MISTDescription[] = _(
     "Raises the Sp. Def of a\n"
-    "partner Pokémon.");
+    "partner Puppets.");
 
 static const u8 sEERIE_IMPULSEDescription[] = _(
     "Exposes the foe to a pulse\n"
@@ -2455,7 +2455,7 @@ static const u8 sLEAFAGEDescription[] = _(
 
 static const u8 sSPOTLIGHTDescription[] = _(
     "Makes the foe attack the\n"
-    "spotlighted Pokémon.");
+    "spotlighted Puppet.");
 
 static const u8 sTOXIC_THREADDescription[] = _(
     "Attacks with a thread that\n"
@@ -2715,7 +2715,7 @@ static const u8 sDRAGON_DARTSDescription[] = _(
     "targets are hit once each.");
     
 static const u8 sTEATIMEDescription[] = _(
-    "All Pokémon have teatime\n"
+    "All Puppets have teatime\n"
     "and eat their Berries.");
     
 static const u8 sOCTOLOCKDescription[] = _(
@@ -2876,7 +2876,7 @@ static const u8 sPOLTERGEISTDescription[] = _(
 
 static const u8 sCORROSIVE_GASDescription[] = _(
     "Highly acidic gas melts items\n"
-    "held by surrounding Pokémon.");
+    "held by surrounding Puppets.");
 
 static const u8 sCOACHINGDescription[] = _(
     "Properly coaches allies to\n"
@@ -2884,7 +2884,7 @@ static const u8 sCOACHINGDescription[] = _(
 
 static const u8 sFLIP_TURNDescription[] = _(
     "Attacks and rushes back to\n"
-    "switch with a party Pokémon.");
+    "switch with a party Puppet.");
 
 static const u8 sTRIPLE_AXELDescription[] = _(
     "A 3-kick attack that gets\n"
