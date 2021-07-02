@@ -6,7 +6,7 @@
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_BULBASAUR_1[] =
+static const union AnimCmd sAnim_CHIBI_SANAE_1[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
@@ -14,7 +14,7 @@ static const union AnimCmd sAnim_BULBASAUR_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_IVYSAUR_1[] =
+static const union AnimCmd sAnim_SANAE_1[] =
 {
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_FRAME(1, 36),
@@ -22,7 +22,7 @@ static const union AnimCmd sAnim_IVYSAUR_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_VENUSAUR_1[] =
+static const union AnimCmd sAnim_CHIBI_ALICE_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 25),
@@ -30,7 +30,7 @@ static const union AnimCmd sAnim_VENUSAUR_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_CHARMANDER_1[] =
+static const union AnimCmd sAnim_ALICE_1[] =
 {
     ANIMCMD_FRAME(0, 2),
     ANIMCMD_FRAME(1, 46),
@@ -38,7 +38,7 @@ static const union AnimCmd sAnim_CHARMANDER_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_CHARMELEON_1[] =
+static const union AnimCmd sAnim_CHIBI_REISEN_1[] =
 {
     ANIMCMD_FRAME(0, 10),
     ANIMCMD_FRAME(1, 25),
@@ -46,7 +46,7 @@ static const union AnimCmd sAnim_CHARMELEON_1[] =
     ANIMCMD_END,
 };
 
-static const union AnimCmd sAnim_CHARIZARD_1[] =
+static const union AnimCmd sAnim_REISEN_1[] =
 {
     ANIMCMD_FRAME(1, 40),
     ANIMCMD_FRAME(0, 5),
@@ -9228,34 +9228,34 @@ static const union AnimCmd *const sAnims_NONE[] ={
     sAnim_NONE_1,
 };
 
-static const union AnimCmd *const sAnims_BULBASAUR[] ={
+static const union AnimCmd *const sAnims_CHIBI_SANAE[] ={
     sAnim_GeneralFrame0,
-    sAnim_BULBASAUR_1,
+    sAnim_CHIBI_SANAE_1,
 };
 
-static const union AnimCmd *const sAnims_IVYSAUR[] ={
+static const union AnimCmd *const sAnims_SANAE[] ={
     sAnim_GeneralFrame0,
-    sAnim_IVYSAUR_1,
+    sAnim_SANAE_1,
 };
 
-static const union AnimCmd *const sAnims_VENUSAUR[] ={
+static const union AnimCmd *const sAnims_CHIBI_ALICE[] ={
     sAnim_GeneralFrame0,
-    sAnim_VENUSAUR_1,
+    sAnim_CHIBI_ALICE_1,
 };
 
-static const union AnimCmd *const sAnims_CHARMANDER[] ={
+static const union AnimCmd *const sAnims_ALICE[] ={
     sAnim_GeneralFrame0,
-    sAnim_CHARMANDER_1,
+    sAnim_ALICE_1,
 };
 
-static const union AnimCmd *const sAnims_CHARMELEON[] ={
+static const union AnimCmd *const sAnims_CHIBI_REISEN[] ={
     sAnim_GeneralFrame0,
-    sAnim_CHARMELEON_1,
+    sAnim_CHIBI_REISEN_1,
 };
 
-static const union AnimCmd *const sAnims_CHARIZARD[] ={
+static const union AnimCmd *const sAnims_REISEN[] ={
     sAnim_GeneralFrame0,
-    sAnim_CHARIZARD_1,
+    sAnim_REISEN_1,
 };
 
 static const union AnimCmd *const sAnims_SQUIRTLE[] ={
@@ -14582,12 +14582,12 @@ static const union AnimCmd *const sAnims_PICHU_SPIKY_EARED[] ={
 const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
 {
     ANIM_CMD(NONE),
-    ANIM_CMD(BULBASAUR),
-    ANIM_CMD(IVYSAUR),
-    ANIM_CMD(VENUSAUR),
-    ANIM_CMD(CHARMANDER),
-    ANIM_CMD(CHARMELEON),
-    ANIM_CMD(CHARIZARD),
+    ANIM_CMD(CHIBI_SANAE),
+    ANIM_CMD(SANAE),
+    ANIM_CMD(CHIBI_ALICE),
+    ANIM_CMD(ALICE),
+    ANIM_CMD(CHIBI_REISEN),
+    ANIM_CMD(REISEN),
     ANIM_CMD(SQUIRTLE),
     ANIM_CMD(WARTORTLE),
     ANIM_CMD(BLASTOISE),

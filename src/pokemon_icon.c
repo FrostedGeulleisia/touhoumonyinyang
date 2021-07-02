@@ -27,13 +27,13 @@ static u8 CreateMonIconSprite(struct MonIconSpriteTemplate *, s16, s16, u8);
 
 const u8 *const gMonIconTable[] =
 {
-    [SPECIES_NONE] = gMonIcon_Bulbasaur,
-    [SPECIES_BULBASAUR] = gMonIcon_Bulbasaur,
-    [SPECIES_IVYSAUR] = gMonIcon_Ivysaur,
-    [SPECIES_VENUSAUR] = gMonIcon_Venusaur,
-    [SPECIES_CHARMANDER] = gMonIcon_Charmander,
-    [SPECIES_CHARMELEON] = gMonIcon_Charmeleon,
-    [SPECIES_CHARIZARD] = gMonIcon_Charizard,
+    [SPECIES_NONE] = gMonIcon_ChibiSanae,
+    [SPECIES_CHIBI_SANAE] = gMonIcon_ChibiSanae,
+    [SPECIES_SANAE] = gMonIcon_Sanae,
+    [SPECIES_CHIBI_ALICE] = gMonIcon_ChibiAlice,
+    [SPECIES_ALICE] = gMonIcon_Alice,
+    [SPECIES_CHIBI_REISEN] = gMonIcon_ChibiReisen,
+    [SPECIES_REISEN] = gMonIcon_Reisen,
     [SPECIES_SQUIRTLE] = gMonIcon_Squirtle,
     [SPECIES_WARTORTLE] = gMonIcon_Wartortle,
     [SPECIES_BLASTOISE] = gMonIcon_Blastoise,
@@ -1244,12 +1244,12 @@ const u8 *const gMonIconTableFemale[] =
 
 const u8 gMonIconPaletteIndices[] =
 {
-    [SPECIES_BULBASAUR] = 4,
-    [SPECIES_IVYSAUR] = 4,
-    [SPECIES_VENUSAUR] = 4,
-    [SPECIES_CHARMANDER] = 0,
-    [SPECIES_CHARMELEON] = 0,
-    [SPECIES_CHARIZARD] = 0,
+    [SPECIES_CHIBI_SANAE] = 4,
+    [SPECIES_SANAE] = 4,
+    [SPECIES_CHIBI_ALICE] = 4,
+    [SPECIES_ALICE] = 0,
+    [SPECIES_CHIBI_REISEN] = 0,
+    [SPECIES_REISEN] = 0,
     [SPECIES_SQUIRTLE] = 0,
     [SPECIES_WARTORTLE] = 2,
     [SPECIES_BLASTOISE] = 2,

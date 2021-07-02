@@ -1,12 +1,12 @@
 const u8 *const gMonFootprintTable[] =
 {
-    [SPECIES_NONE] = gMonFootprint_Bulbasaur,
-    [SPECIES_BULBASAUR] = gMonFootprint_Bulbasaur,
-    [SPECIES_IVYSAUR] = gMonFootprint_Ivysaur,
-    [SPECIES_VENUSAUR] = gMonFootprint_Venusaur,
-    [SPECIES_CHARMANDER] = gMonFootprint_Charmander,
-    [SPECIES_CHARMELEON] = gMonFootprint_Charmeleon,
-    [SPECIES_CHARIZARD] = gMonFootprint_Charizard,
+    [SPECIES_NONE] = gMonFootprint_ChibiSanae,
+    [SPECIES_CHIBI_SANAE] = gMonFootprint_ChibiSanae,
+    [SPECIES_SANAE] = gMonFootprint_Sanae,
+    [SPECIES_CHIBI_ALICE] = gMonFootprint_ChibiAlice,
+    [SPECIES_ALICE] = gMonFootprint_Alice,
+    [SPECIES_CHIBI_REISEN] = gMonFootprint_ChibiReisen,
+    [SPECIES_REISEN] = gMonFootprint_Reisen,
     [SPECIES_SQUIRTLE] = gMonFootprint_Squirtle,
     [SPECIES_WARTORTLE] = gMonFootprint_Wartortle,
     [SPECIES_BLASTOISE] = gMonFootprint_Blastoise,
@@ -650,5 +650,5 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_KELDEO] = gMonFootprint_Keldeo,
     [SPECIES_MELOETTA] = gMonFootprint_Meloetta,
     [SPECIES_GENESECT] = gMonFootprint_Genesect,
-    [SPECIES_EGG] = gMonFootprint_Bulbasaur,
+    [SPECIES_EGG] = gMonFootprint_ChibiSanae,
 };

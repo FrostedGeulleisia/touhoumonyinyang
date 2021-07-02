@@ -6,7 +6,7 @@ const struct BaseStats gBaseStats[] =
 {
     [SPECIES_NONE] = {0},
 
-    [SPECIES_BULBASAUR] =
+    [SPECIES_CHIBI_SANAE] =
     {
         .baseHP        = 45,
         .baseAttack    = 49,
@@ -30,7 +30,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_IVYSAUR] =
+    [SPECIES_SANAE] =
     {
         .baseHP        = 60,
         .baseAttack    = 62,
@@ -55,7 +55,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_VENUSAUR] =
+    [SPECIES_CHIBI_ALICE] =
     {
         .baseHP        = 80,
         .baseAttack    = 82,
@@ -80,7 +80,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CHARMANDER] =
+    [SPECIES_ALICE] =
     {
         .baseHP        = 39,
         .baseAttack    = 52,
@@ -108,7 +108,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CHARMELEON] =
+    [SPECIES_CHIBI_REISEN] =
     {
         .baseHP        = 58,
         .baseAttack    = 64,
@@ -137,7 +137,7 @@ const struct BaseStats gBaseStats[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_CHARIZARD] =
+    [SPECIES_REISEN] =
     {
         .baseHP        = 78,
         .baseAttack    = 84,
