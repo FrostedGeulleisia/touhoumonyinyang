@@ -28,7 +28,7 @@ TODO
 
 ## Composers
 
-AGSMG64
+AGSMGMaster64
 
 ## [Debug Menus](https://github.com/TheXaman/pokeemerald/tree/tx_debug_system)
 
