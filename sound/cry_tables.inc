@@ -1,3 +1,5 @@
+
+
 	.align 2
 gCryTable:: @ 869DCF4
 	cry Cry_Sanae
@@ -6,413 +8,413 @@ gCryTable:: @ 869DCF4
 	cry Cry_Alice
 	cry Cry_Reisen
 	cry Cry_Reisen
-	cry Cry_Squirtle  @ 869DD3C
-	cry Cry_Wartortle  @ 869DD48
-	cry Cry_Blastoise  @ 869DD54
-	cry Cry_Caterpie  @ 869DD60
-	cry Cry_Metapod  @ 869DD6C
-	cry Cry_Butterfree  @ 869DD78
-	cry Cry_Weedle  @ 869DD84
-	cry Cry_Kakuna  @ 869DD90
-	cry Cry_Beedrill  @ 869DD9C
-	cry Cry_Pidgey  @ 869DDA8
-	cry Cry_Pidgeotto  @ 869DDB4
-	cry Cry_Pidgeot  @ 869DDC0
-	cry Cry_Rattata  @ 869DDCC
-	cry Cry_Raticate  @ 869DDD8
-	cry Cry_Spearow  @ 869DDE4
-	cry Cry_Fearow  @ 869DDF0
-	cry Cry_Ekans  @ 869DDFC
-	cry Cry_Arbok  @ 869DE08
-	cry Cry_Pikachu  @ 869DE14
-	cry Cry_Raichu  @ 869DE20
-	cry Cry_Sandshrew  @ 869DE2C
-	cry Cry_Sandslash  @ 869DE38
-	cry Cry_NidoranF  @ 869DE44
-	cry Cry_Nidorina  @ 869DE50
-	cry Cry_Nidoqueen  @ 869DE5C
-	cry Cry_NidoranM  @ 869DE68
-	cry Cry_Nidorino  @ 869DE74
-	cry Cry_Nidoking  @ 869DE80
-	cry Cry_Clefairy  @ 869DE8C
-	cry Cry_Clefable  @ 869DE98
-	cry Cry_Vulpix  @ 869DEA4
-	cry Cry_Ninetales  @ 869DEB0
-	cry Cry_Jigglypuff  @ 869DEBC
-	cry Cry_Wigglytuff  @ 869DEC8
-	cry Cry_Zubat  @ 869DED4
-	cry Cry_Golbat  @ 869DEE0
-	cry Cry_Oddish  @ 869DEEC
-	cry Cry_Gloom  @ 869DEF8
-	cry Cry_Vileplume  @ 869DF04
-	cry Cry_Paras  @ 869DF10
-	cry Cry_Parasect  @ 869DF1C
-	cry Cry_Venonat  @ 869DF28
-	cry Cry_Venomoth  @ 869DF34
-	cry Cry_Diglett  @ 869DF40
-	cry Cry_Dugtrio  @ 869DF4C
-	cry Cry_Meowth  @ 869DF58
-	cry Cry_Persian  @ 869DF64
-	cry Cry_Psyduck  @ 869DF70
-	cry Cry_Golduck  @ 869DF7C
-	cry Cry_Mankey  @ 869DF88
-	cry Cry_Primeape  @ 869DF94
-	cry Cry_Growlithe  @ 869DFA0
-	cry Cry_Arcanine  @ 869DFAC
-	cry Cry_Poliwag  @ 869DFB8
-	cry Cry_Poliwhirl  @ 869DFC4
-	cry Cry_Poliwrath  @ 869DFD0
-	cry Cry_Abra  @ 869DFDC
-	cry Cry_Kadabra  @ 869DFE8
-	cry Cry_Alakazam  @ 869DFF4
-	cry Cry_Machop  @ 869E000
-	cry Cry_Machoke  @ 869E00C
-	cry Cry_Machamp  @ 869E018
-	cry Cry_Bellsprout  @ 869E024
-	cry Cry_Weepinbell  @ 869E030
-	cry Cry_Victreebel  @ 869E03C
-	cry Cry_Tentacool  @ 869E048
-	cry Cry_Tentacruel  @ 869E054
-	cry Cry_Geodude  @ 869E060
-	cry Cry_Graveler  @ 869E06C
-	cry Cry_Golem  @ 869E078
-	cry Cry_Ponyta  @ 869E084
-	cry Cry_Rapidash  @ 869E090
-	cry Cry_Slowpoke  @ 869E09C
-	cry Cry_Slowbro  @ 869E0A8
-	cry Cry_Magnemite  @ 869E0B4
-	cry Cry_Magneton  @ 869E0C0
-	cry Cry_Farfetchd  @ 869E0CC
-	cry Cry_Doduo  @ 869E0D8
-	cry Cry_Dodrio  @ 869E0E4
-	cry Cry_Seel  @ 869E0F0
-	cry Cry_Dewgong  @ 869E0FC
-	cry Cry_Grimer  @ 869E108
-	cry Cry_Muk  @ 869E114
-	cry Cry_Shellder  @ 869E120
-	cry Cry_Cloyster  @ 869E12C
-	cry Cry_Gastly  @ 869E138
-	cry Cry_Haunter  @ 869E144
-	cry Cry_Gengar  @ 869E150
-	cry Cry_Onix  @ 869E15C
-	cry Cry_Drowzee  @ 869E168
-	cry Cry_Hypno  @ 869E174
-	cry Cry_Krabby  @ 869E180
-	cry Cry_Kingler  @ 869E18C
-	cry Cry_Voltorb  @ 869E198
-	cry Cry_Electrode  @ 869E1A4
-	cry Cry_Exeggcute  @ 869E1B0
-	cry Cry_Exeggutor  @ 869E1BC
-	cry Cry_Cubone  @ 869E1C8
-	cry Cry_Marowak  @ 869E1D4
-	cry Cry_Hitmonlee  @ 869E1E0
-	cry Cry_Hitmonchan  @ 869E1EC
-	cry Cry_Lickitung  @ 869E1F8
-	cry Cry_Koffing  @ 869E204
-	cry Cry_Weezing  @ 869E210
-	cry Cry_Rhyhorn  @ 869E21C
-	cry Cry_Rhydon  @ 869E228
-	cry Cry_Chansey  @ 869E234
-	cry Cry_Tangela  @ 869E240
-	cry Cry_Kangaskhan  @ 869E24C
-	cry Cry_Horsea  @ 869E258
-	cry Cry_Seadra  @ 869E264
-	cry Cry_Goldeen  @ 869E270
-	cry Cry_Seaking  @ 869E27C
-	cry Cry_Staryu  @ 869E288
-	cry Cry_Starmie  @ 869E294
-	cry Cry_MrMime  @ 869E2A0
-	cry Cry_Scyther  @ 869E2AC
-	cry Cry_Jynx  @ 869E2B8
-	cry Cry_Electabuzz  @ 869E2C4
-	cry Cry_Magmar  @ 869E2D0
-	cry Cry_Pinsir  @ 869E2DC
-	cry Cry_Tauros  @ 869E2E8
-	cry Cry_Magikarp  @ 869E2F4
-	cry Cry_Gyarados  @ 869E300
-	cry Cry_Lapras  @ 869E30C
-	cry Cry_Ditto  @ 869E318
-	cry Cry_Eevee  @ 869E324
-	cry Cry_Vaporeon  @ 869E330
-	cry Cry_Jolteon  @ 869E33C
-	cry Cry_Flareon  @ 869E348
-	cry Cry_Porygon  @ 869E354
-	cry Cry_Omanyte  @ 869E360
-	cry Cry_Omastar  @ 869E36C
-	cry Cry_Kabuto  @ 869E378
-	cry Cry_Kabutops  @ 869E384
-	cry Cry_Aerodactyl  @ 869E390
-	cry Cry_Snorlax  @ 869E39C
-	cry Cry_Articuno  @ 869E3A8
-	cry Cry_Zapdos  @ 869E3B4
-	cry Cry_Moltres  @ 869E3C0
-	cry Cry_Dratini  @ 869E3CC
-	cry Cry_Dragonair  @ 869E3D8
-	cry Cry_Dragonite  @ 869E3E4
-	cry Cry_Mewtwo  @ 869E3F0
-	cry Cry_Mew  @ 869E3FC
-	cry Cry_Chikorita  @ 869E408
-	cry Cry_Bayleef  @ 869E414
-	cry Cry_Meganium  @ 869E420
-	cry Cry_Cyndaquil  @ 869E42C
-	cry Cry_Quilava  @ 869E438
-	cry Cry_Typhlosion  @ 869E444
-	cry Cry_Totodile  @ 869E450
-	cry Cry_Croconaw  @ 869E45C
-	cry Cry_Feraligatr  @ 869E468
-	cry Cry_Sentret  @ 869E474
-	cry Cry_Furret  @ 869E480
-	cry Cry_Hoothoot  @ 869E48C
-	cry Cry_Noctowl  @ 869E498
-	cry Cry_Ledyba  @ 869E4A4
-	cry Cry_Ledian  @ 869E4B0
-	cry Cry_Spinarak  @ 869E4BC
-	cry Cry_Ariados  @ 869E4C8
-	cry Cry_Crobat  @ 869E4D4
-	cry Cry_Chinchou  @ 869E4E0
-	cry Cry_Lanturn  @ 869E4EC
-	cry Cry_Pichu  @ 869E4F8
-	cry Cry_Cleffa  @ 869E504
-	cry Cry_Igglybuff  @ 869E510
-	cry Cry_Togepi  @ 869E51C
-	cry Cry_Togetic  @ 869E528
-	cry Cry_Natu  @ 869E534
-	cry Cry_Xatu  @ 869E540
-	cry Cry_Mareep  @ 869E54C
-	cry Cry_Flaaffy  @ 869E558
-	cry Cry_Ampharos  @ 869E564
-	cry Cry_Bellossom  @ 869E570
-	cry Cry_Marill  @ 869E57C
-	cry Cry_Azumarill  @ 869E588
-	cry Cry_Sudowoodo  @ 869E594
-	cry Cry_Politoed  @ 869E5A0
-	cry Cry_Hoppip  @ 869E5AC
-	cry Cry_Skiploom  @ 869E5B8
-	cry Cry_Jumpluff  @ 869E5C4
-	cry Cry_Aipom  @ 869E5D0
-	cry Cry_Sunkern  @ 869E5DC
-	cry Cry_Sunflora  @ 869E5E8
-	cry Cry_Yanma  @ 869E5F4
-	cry Cry_Wooper  @ 869E600
-	cry Cry_Quagsire  @ 869E60C
-	cry Cry_Espeon  @ 869E618
-	cry Cry_Umbreon  @ 869E624
-	cry Cry_Murkrow  @ 869E630
-	cry Cry_Slowking  @ 869E63C
-	cry Cry_Misdreavus  @ 869E648
-	cry Cry_Unown  @ 869E654
-	cry Cry_Wobbuffet  @ 869E660
-	cry Cry_Girafarig  @ 869E66C
-	cry Cry_Pineco  @ 869E678
-	cry Cry_Forretress  @ 869E684
-	cry Cry_Dunsparce  @ 869E690
-	cry Cry_Gligar  @ 869E69C
-	cry Cry_Steelix  @ 869E6A8
-	cry Cry_Snubbull  @ 869E6B4
-	cry Cry_Granbull  @ 869E6C0
-	cry Cry_Qwilfish  @ 869E6CC
-	cry Cry_Scizor  @ 869E6D8
-	cry Cry_Shuckle  @ 869E6E4
-	cry Cry_Heracross  @ 869E6F0
-	cry Cry_Sneasel  @ 869E6FC
-	cry Cry_Teddiursa  @ 869E708
-	cry Cry_Ursaring  @ 869E714
-	cry Cry_Slugma  @ 869E720
-	cry Cry_Magcargo  @ 869E72C
-	cry Cry_Swinub  @ 869E738
-	cry Cry_Piloswine  @ 869E744
-	cry Cry_Corsola  @ 869E750
-	cry Cry_Remoraid  @ 869E75C
-	cry Cry_Octillery  @ 869E768
-	cry Cry_Delibird  @ 869E774
-	cry Cry_Mantine  @ 869E780
-	cry Cry_Skarmory  @ 869E78C
-	cry Cry_Houndour  @ 869E798
-	cry Cry_Houndoom  @ 869E7A4
-	cry Cry_Kingdra  @ 869E7B0
-	cry Cry_Phanpy  @ 869E7BC
-	cry Cry_Donphan  @ 869E7C8
-	cry Cry_Porygon2  @ 869E7D4
-	cry Cry_Stantler  @ 869E7E0
-	cry Cry_Smeargle  @ 869E7EC
-	cry Cry_Tyrogue  @ 869E7F8
-	cry Cry_Hitmontop  @ 869E804
-	cry Cry_Smoochum  @ 869E810
-	cry Cry_Elekid  @ 869E81C
-	cry Cry_Magby  @ 869E828
-	cry Cry_Miltank  @ 869E834
-	cry Cry_Blissey  @ 869E840
-	cry Cry_Raikou  @ 869E84C
-	cry Cry_Entei  @ 869E858
-	cry Cry_Suicune  @ 869E864
-	cry Cry_Larvitar  @ 869E870
-	cry Cry_Pupitar  @ 869E87C
-	cry Cry_Tyranitar  @ 869E888
-	cry Cry_Lugia  @ 869E894
-	cry Cry_HoOh  @ 869E8A0
-	cry Cry_Celebi  @ 869E8AC
-	cry Cry_Treecko
-	cry Cry_Grovyle
-	cry Cry_Sceptile
-	cry Cry_Torchic
-	cry Cry_Combusken
-	cry Cry_Blaziken
-	cry Cry_Mudkip
-	cry Cry_Marshtomp
-	cry Cry_Swampert
-	cry Cry_Poochyena
-	cry Cry_Mightyena
-	cry Cry_Zigzagoon
-	cry Cry_Linoone
-	cry Cry_Wurmple
-	cry Cry_Silcoon
-	cry Cry_Beautifly
-	cry Cry_Cascoon
-	cry Cry_Dustox
-	cry Cry_Lotad
-	cry Cry_Lombre
-	cry Cry_Ludicolo
-	cry Cry_Seedot
-	cry Cry_Nuzleaf
-	cry Cry_Shiftry
-	cry Cry_Taillow
-	cry Cry_Swellow
-	cry Cry_Wingull
-	cry Cry_Pelipper
-	cry Cry_Ralts
-	cry Cry_Kirlia
-	cry Cry_Gardevoir
-	cry Cry_Surskit
-	cry Cry_Masquerain
-	cry Cry_Shroomish
-	cry Cry_Breloom
-	cry Cry_Slakoth
-	cry Cry_Vigoroth
-	cry Cry_Slaking
-	cry Cry_Nincada
-	cry Cry_Ninjask
-	cry Cry_Shedinja
-	cry Cry_Whismur
-	cry Cry_Loudred
-	cry Cry_Exploud
-	cry Cry_Makuhita
-	cry Cry_Hariyama
-	cry Cry_Azurill
-	cry Cry_Nosepass
-	cry Cry_Skitty
-	cry Cry_Delcatty
-	cry Cry_Sableye
-	cry Cry_Mawile
-	cry Cry_Aron
-	cry Cry_Lairon
-	cry Cry_Aggron
-	cry Cry_Meditite
-	cry Cry_Medicham
-	cry Cry_Electrike
-	cry Cry_Manectric
-	cry Cry_Plusle
-	cry Cry_Minun
-	cry Cry_Volbeat
-	cry Cry_Illumise
-	cry Cry_Roselia
-	cry Cry_Gulpin
-	cry Cry_Swalot
-	cry Cry_Carvanha
-	cry Cry_Sharpedo
-	cry Cry_Wailmer
-	cry Cry_Wailord
-	cry Cry_Numel
-	cry Cry_Camerupt
-	cry Cry_Torkoal
-	cry Cry_Spoink
-	cry Cry_Grumpig
-	cry Cry_Spinda
-	cry Cry_Trapinch
-	cry Cry_Vibrava
-	cry Cry_Flygon
-	cry Cry_Cacnea
-	cry Cry_Cacturne
-	cry Cry_Swablu
-	cry Cry_Altaria
-	cry Cry_Zangoose
-	cry Cry_Seviper
-	cry Cry_Lunatone
-	cry Cry_Solrock
-	cry Cry_Barboach
-	cry Cry_Whiscash
-	cry Cry_Corphish
-	cry Cry_Crawdaunt
-	cry Cry_Baltoy
-	cry Cry_Claydol
-	cry Cry_Lileep
-	cry Cry_Cradily
-	cry Cry_Anorith
-	cry Cry_Armaldo
-	cry Cry_Feebas
-	cry Cry_Milotic
-	cry Cry_Castform
-	cry Cry_Kecleon
-	cry Cry_Shuppet
-	cry Cry_Banette
-	cry Cry_Duskull
-	cry Cry_Dusclops
-	cry Cry_Tropius
-	cry Cry_Chimecho
-	cry Cry_Absol
-	cry Cry_Wynaut
-	cry Cry_Snorunt
-	cry Cry_Glalie
-	cry Cry_Spheal
-	cry Cry_Sealeo
-	cry Cry_Walrein
-	cry Cry_Clamperl
-	cry Cry_Huntail
-	cry Cry_Gorebyss
-	cry Cry_Relicanth
-	cry Cry_Luvdisc
-	cry Cry_Bagon
-	cry Cry_Shelgon
-	cry Cry_Salamence
-	cry Cry_Beldum
-	cry Cry_Metang
-	cry Cry_Metagross
-	cry Cry_Regirock
-	cry Cry_Regice
-	cry Cry_Registeel
-	cry Cry_Latias
-	cry Cry_Latios
-	cry Cry_Kyogre
-	cry Cry_Groudon
-	cry Cry_Rayquaza
-	cry Cry_Jirachi
-	cry Cry_Deoxys
-	cry Cry_Turtwig
-	cry Cry_Grotle
-	cry Cry_Torterra
-	cry Cry_Chimchar
-	cry Cry_Monferno
-	cry Cry_Infernape
-	cry Cry_Piplup
-	cry Cry_Prinplup
-	cry Cry_Empoleon
-	cry Cry_Starly
-	cry Cry_Staravia
-	cry Cry_Staraptor
-	cry Cry_Bidoof
-	cry Cry_Bibarel
-	cry Cry_Kricketot
-	cry Cry_Kricketune
-	cry Cry_Shinx
-	cry Cry_Luxio
-	cry Cry_Luxray
-	cry Cry_Budew
-	cry Cry_Roserade
-	cry Cry_Cranidos
-	cry Cry_Rampardos
-	cry Cry_Shieldon
-	cry Cry_Bastiodon
-	cry Cry_Burmy
-	cry Cry_Wormadam
+	cry Cry_LilyWhite
+	cry Cry_LilyWhite
+	cry Cry_LilyBlack
+	cry Cry_LilyBlack
+	cry Cry_Momiji
+	cry Cry_Momiji
+	cry Cry_Shizuha
+	cry Cry_Shizuha
+	cry Cry_Medicine
+	cry Cry_Medicine
+	cry Cry_Koakuma
+	cry Cry_Koakuma
+	cry Cry_Nazrin
+	cry Cry_Nazrin
+	cry Cry_Tokiko
+	cry Cry_Tokiko
+	cry Cry_Remilia
+	cry Cry_Remilia
+	cry Cry_Cirno
+	cry Cry_Cirno
+	cry Cry_Rumia
+	cry Cry_Rumia
+	cry Cry_AliceDolls
+	cry Cry_Flandre
+	cry Cry_Flandre
+	cry Cry_AliceDolls
+	cry Cry_Youmu
+	cry Cry_Youmu
+	cry Cry_Yukari
+	cry Cry_Yukari
+	cry Cry_Suika
+	cry Cry_Suika
+	cry Cry_Mystia
+	cry Cry_Mystia
+	cry Cry_Minoriko
+	cry Cry_Minoriko
+	cry Cry_Keine
+	cry Cry_Keine
+	cry Cry_KeineB
+	cry Cry_Iku
+	cry Cry_Iku
+	cry Cry_Koishi
+	cry Cry_Koishi
+	cry Cry_Yamame
+	cry Cry_Yamame
+	cry Cry_Chen
+	cry Cry_Chen
+	cry Cry_Yorihime
+	cry Cry_Yorihime
+	cry Cry_Kaguya
+	cry Cry_Kaguya
+	cry Cry_Mokou
+	cry Cry_Mokou
+	cry Cry_Hatate
+	cry Cry_Hatate
+	cry Cry_Letty
+	cry Cry_Letty
+	cry Cry_Patchouli
+	cry Cry_Patchouli
+	cry Cry_Yuugi
+	cry Cry_Yuugi
+	cry Cry_Tenshi
+	cry Cry_Tenshi
+	cry Cry_Parsee
+	cry Cry_Parsee
+	cry Cry_Murasa
+	cry Cry_Murasa
+	cry Cry_Kisume
+	cry Cry_Kisume
+	cry Cry_Kogasa
+	cry Cry_Kogasa
+	cry Cry_Satori
+	cry Cry_Satori
+	cry Cry_Eirin
+	cry Cry_Eirin
+	cry Cry_Ran
+	cry Cry_Ran
+	cry Cry_Daiyousei
+	cry Cry_Daiyousei
+	cry Cry_Nitori
+	cry Cry_Nitori
+	cry Cry_Hina
+	cry Cry_Hina
+	cry Cry_Komachi
+	cry Cry_Komachi
+	cry Cry_Yuyuko
+	cry Cry_Yuyuko
+	cry Cry_Meiling
+	cry Cry_Meiling
+	cry Cry_Sakuya
+	cry Cry_Sakuya
+	cry Cry_Lunasa
+	cry Cry_Lunasa
+	cry Cry_Merlin
+	cry Cry_Merlin
+	cry Cry_Lyrica
+	cry Cry_Lyrica
+	cry Cry_Layla
+	cry Cry_Layla
+	cry Cry_Kanako
+	cry Cry_Kanako
+	cry Cry_Rin
+	cry Cry_Rin
+	cry Cry_Utsuho
+	cry Cry_Utsuho
+	cry Cry_Ichirin
+	cry Cry_Ichirin
+	cry Cry_Sunny
+	cry Cry_Sunny
+	cry Cry_Luna
+	cry Cry_Luna
+	cry Cry_Star
+	cry Cry_Star
+	cry Cry_Yuuka
+	cry Cry_Yuuka
+	cry Cry_Aya
+	cry Cry_Aya
+	cry Cry_Eiki
+	cry Cry_Eiki
+	cry Cry_Shou
+	cry Cry_Shou
+	cry Cry_Wriggle
+	cry Cry_Wriggle
+	cry Cry_Tewi
+	cry Cry_Tewi
+	cry Cry_Kedama
+	cry Cry_Nue
+	cry Cry_Nue
+	cry Cry_Suwako
+	cry Cry_Suwako
+	cry Cry_ReisenTwo
+	cry Cry_Marisa
+	cry Cry_Marisa
+	cry Cry_Reimu
+	cry Cry_Reimu
+	cry Cry_Byakuren
+	cry Cry_Byakuren
+	cry Cry_Konngara
+	cry Cry_Kikuri
+	cry Cry_Yuugenma
+	cry Cry_Toyohime
+	cry Cry_Toyohime
+	cry Cry_AliceDolls
+	cry Cry_Sariel
+	cry Cry_Mamizou
+	cry Cry_Akyuu
+	cry Cry_Genji
+	cry Cry_Tori
+	cry Cry_Namazu
+	cry Cry_Elly
+	cry Cry_Elly
+	cry Cry_Orange
+	cry Cry_Orange
+	cry Cry_Youki
+	cry Cry_Chiyuri
+	cry Cry_Chiyuri
+	cry Cry_Yumemi
+	cry Cry_Yumemi
+	cry Cry_Ellen
+	cry Cry_Ellen
+	cry Cry_Kazami
+	cry Cry_Kazami
+	cry Cry_Meira
+	cry Cry_Meira
+	cry Cry_Sara
+	cry Cry_Sara
+	cry Cry_Louise
+	cry Cry_Louise
+	cry Cry_Margatroid
+	cry Cry_Margatroid
+	cry Cry_Kana
+	cry Cry_Kana
+	cry Cry_Hakurei
+	cry Cry_Hakurei
+	cry Cry_Kirisame
+	cry Cry_Kirisame
+	cry Cry_Kotohime
+	cry Cry_Kotohime
+	cry Cry_Yumeko
+	cry Cry_Yumeko
+	cry Cry_Shinki
+	cry Cry_Shinki
+	cry Cry_MimiChan
+	cry Cry_Ruukoto
+	cry Cry_Rika
+	cry Cry_Rika
+	cry Cry_Mugetsu
+	cry Cry_Mugetsu
+	cry Cry_Gengetsu
+	cry Cry_Gengetsu
+	cry Cry_Kurumi
+	cry Cry_Kurumi
+	cry Cry_Rikako
+	cry Cry_Rikako
+	cry Cry_Unown
+	cry Cry_Yuki
+	cry Cry_Yuki
+	cry Cry_Mai
+	cry Cry_Mai
+	cry Cry_Sunny
+	cry Cry_Luna
+	cry Cry_Star
+	cry Cry_Nitori
+	cry Cry_Nitori
+	cry Cry_Mokou
+	cry Cry_Mokou
+	cry Cry_Reisen
+	cry Cry_Reisen
+	cry Cry_Sakuya
+	cry Cry_Sakuya
+	cry Cry_Rumia
+	cry Cry_Rumia
+	cry Cry_Mystia
+	cry Cry_Mystia
+	cry Cry_Chen
+	cry Cry_Chen
+	cry Cry_Youmu
+	cry Cry_Youmu
+	cry Cry_Yuuka
+	cry Cry_Yuuka
+	cry Cry_Aya
+	cry Cry_Aya
+	cry Cry_Tenshi
+	cry Cry_Tenshi
+	cry Cry_Parsee
+	cry Cry_Parsee
+	cry Cry_Koishi
+	cry Cry_Koishi
+	cry Cry_Byakuren
+	cry Cry_Byakuren
+	cry Cry_Ichirin
+	cry Cry_Ichirin
+	cry Cry_Kanako
+	cry Cry_Kanako
+	cry Cry_Kaguya
+	cry Cry_Kaguya
+	cry Cry_Shingyoku
+	cry Cry_Tenma
+	cry Cry_DarkAlice
+	cry Cry_Utsuho
+	cry Cry_Utsuho
+	cry Cry_Momiji
+	cry Cry_Elis
+	cry Cry_Mima
+	cry Cry_Sendai
+	cry Cry_Kokoro
+	cry Cry_Kokoro
+	cry Cry_Vivit
+	cry Cry_Benben
+	cry Cry_Benben
+	cry Cry_Yatsuhashi
+	cry Cry_Sekibanki
+	cry Cry_Sekibanki
+	cry Cry_Kagerou
+	cry Cry_Kagerou
+	cry Cry_Wakasagi
+	cry Cry_Wakasagi
+	cry Cry_Seija
+	cry Cry_Yatsuhashi
+	cry Cry_Raiko
+	cry Cry_Raiko
+	cry Cry_Sukuna
+	cry Cry_Sukuna
+	cry Cry_Kosuzu
+	cry Cry_Seija
+	cry Cry_Kosuzu
+	cry Cry_Sumireko
+	cry Cry_Sumireko
+	cry Cry_Kasen
+	cry Cry_Kasen
+	cry Cry_Komachi
+	cry Cry_Komachi
+	cry Cry_Eirin
+	cry Cry_Eirin
+	cry Cry_Yukari
+	cry Cry_Yukari
+	cry Cry_Alice
+	cry Cry_Alice
+	cry Cry_Reimu
+	cry Cry_Reimu
+	cry Cry_Cirno
+	cry Cry_Cirno
+	cry Cry_Yuyuko
+	cry Cry_Yuyuko
+	cry Cry_Lunasa
+	cry Cry_Merlin
+	cry Cry_Lyrica
+	cry Cry_Ran
+	cry Cry_Ran
+	cry Cry_Medicine
+	cry Cry_Medicine
+	cry Cry_Hina
+	cry Cry_Hina
+	cry Cry_Shizuha
+	cry Cry_Rin
+	cry Cry_Rin
+	cry Cry_ZombieF
+	cry Cry_Shizuha
+	cry Cry_Suwako
+	cry Cry_Shou
+	cry Cry_Shou
+	cry Cry_Tokiko
+	cry Cry_Suwako
+	cry Cry_Yamame
+	cry Cry_Kogasa
+	cry Cry_Kogasa
+	cry Cry_Remilia
+	cry Cry_Flandre
+	cry Cry_Wriggle
+	cry Cry_Meiling
+	cry Cry_Tensoku
+	cry Cry_Sunny
+	cry Cry_Luna
+	cry Cry_Wriggle
+	cry Cry_Koakuma
+	cry Cry_Meiling
+	cry Cry_Elis
+	cry Cry_Sariel
+	cry Cry_AdMystia
+	cry Cry_Hatate
+	cry Cry_Hatate
+	cry Cry_AkiSisters
+	cry Cry_Layla
+	cry Cry_KeineB
+	cry Cry_Remilia
+	cry Cry_Tewi
+	cry Cry_Tewi
+	cry Cry_Eiki
+	cry Cry_Minoriko
+	cry Cry_Suika
+	cry Cry_Sanae
+	cry Cry_Sanae
+	cry Cry_Flandre
+	cry Cry_Daiyousei
+	cry Cry_Mamizou
+	cry Cry_Kyouko
+	cry Cry_Kyouko
+	cry Cry_Eiki
+	cry Cry_Toyohime
+	cry Cry_Yoshika
+	cry Cry_Yoshika
+	cry Cry_Konngara
+	cry Cry_Yuugenma
+	cry Cry_Suika
+	cry Cry_LilyWhite
+	cry Cry_LilyBlack
+	cry Cry_Nue
+	cry Cry_Nue
+	cry Cry_Patchouli
+	cry Cry_Letty
+	cry Cry_Letty
+	cry Cry_Yorihime
+	cry Cry_Shingyoku
+	cry Cry_Seiga
+	cry Cry_Yuugi
+	cry Cry_Nazrin
+	cry Cry_Nazrin
+	cry Cry_Kisume
+	cry Cry_Yuugi
+	cry Cry_Keine
+	cry Cry_Tojiko
+	cry Cry_Iku
+	cry Cry_Iku
+	cry Cry_Minoriko
+	cry Cry_Rinnosuke
+	cry Cry_AdCirno
+	cry Cry_AdReisen
+	cry Cry_Tojiko
+	cry Cry_Sariel
+	cry Cry_LilyWhite
+	cry Cry_Mima
+	cry Cry_Kikuri
+	cry Cry_AdMeiling
+	cry Cry_Patchouli
+	cry Cry_Marisa
+	cry Cry_Marisa
+	cry Cry_Futo
+	cry Cry_Murasa
+	cry Cry_Murasa
+	cry Cry_Star
+	cry Cry_Kazami
+	cry Cry_Medicine
+	cry Cry_Daiyousei
+	cry Cry_Yamame
+	cry Cry_Satori
+	cry Cry_Satori
+	cry Cry_AdLetty
+	cry Cry_AdTewi
+	cry Cry_AdMarisa
+	cry Cry_AdAlice
+	cry Cry_AdMokou
+	cry Cry_AdYukari
+	cry Cry_AdRan
+	cry Cry_AdChen
+	cry Cry_Futo
+	cry Cry_Suwako
+	cry Cry_Utsuho
+	cry Cry_Kanako
+	cry Cry_Shingyoku
+	cry Cry_Shingyoku
+	cry Cry_Miko
+	cry Cry_Ayakashi
+	cry Cry_Miko
+	cry Cry_Tenma
+	cry Cry_Sendai
+	cry Cry_Vivit
+	cry Cry_AVIVIT
 	cry Cry_Mothim
 	cry Cry_Combee
 	cry Cry_Vespiquen
@@ -951,36 +953,36 @@ gCryTable:: @ 869DCF4
 	cry_uncomp Cry_KyogrePrimal
 	cry_uncomp Cry_GroudonPrimal
 	@ Alolan Forms
-	cry Cry_Rattata
-	cry Cry_Raticate
-	cry Cry_Raichu
-	cry Cry_Sandshrew
-	cry Cry_Sandslash
-	cry Cry_Vulpix
-	cry Cry_Ninetales
-	cry Cry_Diglett
-	cry Cry_Dugtrio
-	cry Cry_Meowth
-	cry Cry_Persian
-	cry Cry_Geodude
-	cry Cry_Graveler
-	cry Cry_Golem
-	cry Cry_Grimer
-	cry Cry_Muk
-	cry Cry_Exeggutor
-	cry Cry_Marowak
+	cry Cry_Nazrin
+	cry Cry_Nazrin
+	cry Cry_Cirno
+	cry Cry_Rumia
+	cry Cry_Rumia
+	cry Cry_Suika
+	cry Cry_Suika
+	cry Cry_Yamame
+	cry Cry_Yamame
+	cry Cry_Chen
+	cry Cry_Chen
+	cry Cry_Kisume
+	cry Cry_Kisume
+	cry Cry_Kogasa
+	cry Cry_Hina
+	cry Cry_Hina
+	cry Cry_Lyrica
+	cry Cry_Layla
 	@ Galarian Forms
-	cry Cry_Meowth
-	cry Cry_Ponyta
-	cry Cry_Rapidash
+	cry Cry_Chen
+	cry Cry_Kogasa
+	cry Cry_Satori
 	cry_uncomp Cry_SlowpokeGalarian
-	cry Cry_Slowbro
-	cry Cry_Farfetchd
-	cry Cry_Weezing
-	cry Cry_MrMime
-	cry Cry_Articuno
-	cry Cry_Zapdos
-	cry Cry_Moltres
+	cry Cry_Eirin
+	cry Cry_Ran
+	cry Cry_Utsuho
+	cry Cry_Aya
+	cry Cry_Konngara
+	cry Cry_Kikuri
+	cry Cry_Yuugenma
 	cry Cry_Slowking
 	cry Cry_Corsola
 	cry Cry_Zigzagoon
@@ -991,21 +993,21 @@ gCryTable:: @ 869DCF4
 	cry Cry_Stunfisk
 	@ Misc Forms
 	@ Cosplay Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
 	@ Cap Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
-	cry Cry_Pikachu
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
 	@ Pichu
 	cry Cry_Pichu
 	@ Unown
@@ -1280,413 +1282,413 @@ gCryTable2:: @ 869EF24
 	cry Cry_Alice
 	cry Cry_Reisen
 	cry Cry_Reisen
-	cry2 Cry_Squirtle  @ 869EF6C
-	cry2 Cry_Wartortle  @ 869EF78
-	cry2 Cry_Blastoise  @ 869EF84
-	cry2 Cry_Caterpie  @ 869EF90
-	cry2 Cry_Metapod  @ 869EF9C
-	cry2 Cry_Butterfree  @ 869EFA8
-	cry2 Cry_Weedle  @ 869EFB4
-	cry2 Cry_Kakuna  @ 869EFC0
-	cry2 Cry_Beedrill  @ 869EFCC
-	cry2 Cry_Pidgey  @ 869EFD8
-	cry2 Cry_Pidgeotto  @ 869EFE4
-	cry2 Cry_Pidgeot  @ 869EFF0
-	cry2 Cry_Rattata  @ 869EFFC
-	cry2 Cry_Raticate  @ 869F008
-	cry2 Cry_Spearow  @ 869F014
-	cry2 Cry_Fearow  @ 869F020
-	cry2 Cry_Ekans  @ 869F02C
-	cry2 Cry_Arbok  @ 869F038
-	cry2 Cry_Pikachu  @ 869F044
-	cry2 Cry_Raichu  @ 869F050
-	cry2 Cry_Sandshrew  @ 869F05C
-	cry2 Cry_Sandslash  @ 869F068
-	cry2 Cry_NidoranF  @ 869F074
-	cry2 Cry_Nidorina  @ 869F080
-	cry2 Cry_Nidoqueen  @ 869F08C
-	cry2 Cry_NidoranM  @ 869F098
-	cry2 Cry_Nidorino  @ 869F0A4
-	cry2 Cry_Nidoking  @ 869F0B0
-	cry2 Cry_Clefairy  @ 869F0BC
-	cry2 Cry_Clefable  @ 869F0C8
-	cry2 Cry_Vulpix  @ 869F0D4
-	cry2 Cry_Ninetales  @ 869F0E0
-	cry2 Cry_Jigglypuff  @ 869F0EC
-	cry2 Cry_Wigglytuff  @ 869F0F8
-	cry2 Cry_Zubat  @ 869F104
-	cry2 Cry_Golbat  @ 869F110
-	cry2 Cry_Oddish  @ 869F11C
-	cry2 Cry_Gloom  @ 869F128
-	cry2 Cry_Vileplume  @ 869F134
-	cry2 Cry_Paras  @ 869F140
-	cry2 Cry_Parasect  @ 869F14C
-	cry2 Cry_Venonat  @ 869F158
-	cry2 Cry_Venomoth  @ 869F164
-	cry2 Cry_Diglett  @ 869F170
-	cry2 Cry_Dugtrio  @ 869F17C
-	cry2 Cry_Meowth  @ 869F188
-	cry2 Cry_Persian  @ 869F194
-	cry2 Cry_Psyduck  @ 869F1A0
-	cry2 Cry_Golduck  @ 869F1AC
-	cry2 Cry_Mankey  @ 869F1B8
-	cry2 Cry_Primeape  @ 869F1C4
-	cry2 Cry_Growlithe  @ 869F1D0
-	cry2 Cry_Arcanine  @ 869F1DC
-	cry2 Cry_Poliwag  @ 869F1E8
-	cry2 Cry_Poliwhirl  @ 869F1F4
-	cry2 Cry_Poliwrath  @ 869F200
-	cry2 Cry_Abra  @ 869F20C
-	cry2 Cry_Kadabra  @ 869F218
-	cry2 Cry_Alakazam  @ 869F224
-	cry2 Cry_Machop  @ 869F230
-	cry2 Cry_Machoke  @ 869F23C
-	cry2 Cry_Machamp  @ 869F248
-	cry2 Cry_Bellsprout  @ 869F254
-	cry2 Cry_Weepinbell  @ 869F260
-	cry2 Cry_Victreebel  @ 869F26C
-	cry2 Cry_Tentacool  @ 869F278
-	cry2 Cry_Tentacruel  @ 869F284
-	cry2 Cry_Geodude  @ 869F290
-	cry2 Cry_Graveler  @ 869F29C
-	cry2 Cry_Golem  @ 869F2A8
-	cry2 Cry_Ponyta  @ 869F2B4
-	cry2 Cry_Rapidash  @ 869F2C0
-	cry2 Cry_Slowpoke  @ 869F2CC
-	cry2 Cry_Slowbro  @ 869F2D8
-	cry2 Cry_Magnemite  @ 869F2E4
-	cry2 Cry_Magneton  @ 869F2F0
-	cry2 Cry_Farfetchd  @ 869F2FC
-	cry2 Cry_Doduo  @ 869F308
-	cry2 Cry_Dodrio  @ 869F314
-	cry2 Cry_Seel  @ 869F320
-	cry2 Cry_Dewgong  @ 869F32C
-	cry2 Cry_Grimer  @ 869F338
-	cry2 Cry_Muk  @ 869F344
-	cry2 Cry_Shellder  @ 869F350
-	cry2 Cry_Cloyster  @ 869F35C
-	cry2 Cry_Gastly  @ 869F368
-	cry2 Cry_Haunter  @ 869F374
-	cry2 Cry_Gengar  @ 869F380
-	cry2 Cry_Onix  @ 869F38C
-	cry2 Cry_Drowzee  @ 869F398
-	cry2 Cry_Hypno  @ 869F3A4
-	cry2 Cry_Krabby  @ 869F3B0
-	cry2 Cry_Kingler  @ 869F3BC
-	cry2 Cry_Voltorb  @ 869F3C8
-	cry2 Cry_Electrode  @ 869F3D4
-	cry2 Cry_Exeggcute  @ 869F3E0
-	cry2 Cry_Exeggutor  @ 869F3EC
-	cry2 Cry_Cubone  @ 869F3F8
-	cry2 Cry_Marowak  @ 869F404
-	cry2 Cry_Hitmonlee  @ 869F410
-	cry2 Cry_Hitmonchan  @ 869F41C
-	cry2 Cry_Lickitung  @ 869F428
-	cry2 Cry_Koffing  @ 869F434
-	cry2 Cry_Weezing  @ 869F440
-	cry2 Cry_Rhyhorn  @ 869F44C
-	cry2 Cry_Rhydon  @ 869F458
-	cry2 Cry_Chansey  @ 869F464
-	cry2 Cry_Tangela  @ 869F470
-	cry2 Cry_Kangaskhan  @ 869F47C
-	cry2 Cry_Horsea  @ 869F488
-	cry2 Cry_Seadra  @ 869F494
-	cry2 Cry_Goldeen  @ 869F4A0
-	cry2 Cry_Seaking  @ 869F4AC
-	cry2 Cry_Staryu  @ 869F4B8
-	cry2 Cry_Starmie  @ 869F4C4
-	cry2 Cry_MrMime  @ 869F4D0
-	cry2 Cry_Scyther  @ 869F4DC
-	cry2 Cry_Jynx  @ 869F4E8
-	cry2 Cry_Electabuzz  @ 869F4F4
-	cry2 Cry_Magmar  @ 869F500
-	cry2 Cry_Pinsir  @ 869F50C
-	cry2 Cry_Tauros  @ 869F518
-	cry2 Cry_Magikarp  @ 869F524
-	cry2 Cry_Gyarados  @ 869F530
-	cry2 Cry_Lapras  @ 869F53C
-	cry2 Cry_Ditto  @ 869F548
-	cry2 Cry_Eevee  @ 869F554
-	cry2 Cry_Vaporeon  @ 869F560
-	cry2 Cry_Jolteon  @ 869F56C
-	cry2 Cry_Flareon  @ 869F578
-	cry2 Cry_Porygon  @ 869F584
-	cry2 Cry_Omanyte  @ 869F590
-	cry2 Cry_Omastar  @ 869F59C
-	cry2 Cry_Kabuto  @ 869F5A8
-	cry2 Cry_Kabutops  @ 869F5B4
-	cry2 Cry_Aerodactyl  @ 869F5C0
-	cry2 Cry_Snorlax  @ 869F5CC
-	cry2 Cry_Articuno  @ 869F5D8
-	cry2 Cry_Zapdos  @ 869F5E4
-	cry2 Cry_Moltres  @ 869F5F0
-	cry2 Cry_Dratini  @ 869F5FC
-	cry2 Cry_Dragonair  @ 869F608
-	cry2 Cry_Dragonite  @ 869F614
-	cry2 Cry_Mewtwo  @ 869F620
-	cry2 Cry_Mew  @ 869F62C
-	cry2 Cry_Chikorita  @ 869F638
-	cry2 Cry_Bayleef  @ 869F644
-	cry2 Cry_Meganium  @ 869F650
-	cry2 Cry_Cyndaquil  @ 869F65C
-	cry2 Cry_Quilava  @ 869F668
-	cry2 Cry_Typhlosion  @ 869F674
-	cry2 Cry_Totodile  @ 869F680
-	cry2 Cry_Croconaw  @ 869F68C
-	cry2 Cry_Feraligatr  @ 869F698
-	cry2 Cry_Sentret  @ 869F6A4
-	cry2 Cry_Furret  @ 869F6B0
-	cry2 Cry_Hoothoot  @ 869F6BC
-	cry2 Cry_Noctowl  @ 869F6C8
-	cry2 Cry_Ledyba  @ 869F6D4
-	cry2 Cry_Ledian  @ 869F6E0
-	cry2 Cry_Spinarak  @ 869F6EC
-	cry2 Cry_Ariados  @ 869F6F8
-	cry2 Cry_Crobat  @ 869F704
-	cry2 Cry_Chinchou  @ 869F710
-	cry2 Cry_Lanturn  @ 869F71C
-	cry2 Cry_Pichu  @ 869F728
-	cry2 Cry_Cleffa  @ 869F734
-	cry2 Cry_Igglybuff  @ 869F740
-	cry2 Cry_Togepi  @ 869F74C
-	cry2 Cry_Togetic  @ 869F758
-	cry2 Cry_Natu  @ 869F764
-	cry2 Cry_Xatu  @ 869F770
-	cry2 Cry_Mareep  @ 869F77C
-	cry2 Cry_Flaaffy  @ 869F788
-	cry2 Cry_Ampharos  @ 869F794
-	cry2 Cry_Bellossom  @ 869F7A0
-	cry2 Cry_Marill  @ 869F7AC
-	cry2 Cry_Azumarill  @ 869F7B8
-	cry2 Cry_Sudowoodo  @ 869F7C4
-	cry2 Cry_Politoed  @ 869F7D0
-	cry2 Cry_Hoppip  @ 869F7DC
-	cry2 Cry_Skiploom  @ 869F7E8
-	cry2 Cry_Jumpluff  @ 869F7F4
-	cry2 Cry_Aipom  @ 869F800
-	cry2 Cry_Sunkern  @ 869F80C
-	cry2 Cry_Sunflora  @ 869F818
-	cry2 Cry_Yanma  @ 869F824
-	cry2 Cry_Wooper  @ 869F830
-	cry2 Cry_Quagsire  @ 869F83C
-	cry2 Cry_Espeon  @ 869F848
-	cry2 Cry_Umbreon  @ 869F854
-	cry2 Cry_Murkrow  @ 869F860
-	cry2 Cry_Slowking  @ 869F86C
-	cry2 Cry_Misdreavus  @ 869F878
-	cry2 Cry_Unown  @ 869F884
-	cry2 Cry_Wobbuffet  @ 869F890
-	cry2 Cry_Girafarig  @ 869F89C
-	cry2 Cry_Pineco  @ 869F8A8
-	cry2 Cry_Forretress  @ 869F8B4
-	cry2 Cry_Dunsparce  @ 869F8C0
-	cry2 Cry_Gligar  @ 869F8CC
-	cry2 Cry_Steelix  @ 869F8D8
-	cry2 Cry_Snubbull  @ 869F8E4
-	cry2 Cry_Granbull  @ 869F8F0
-	cry2 Cry_Qwilfish  @ 869F8FC
-	cry2 Cry_Scizor  @ 869F908
-	cry2 Cry_Shuckle  @ 869F914
-	cry2 Cry_Heracross  @ 869F920
-	cry2 Cry_Sneasel  @ 869F92C
-	cry2 Cry_Teddiursa  @ 869F938
-	cry2 Cry_Ursaring  @ 869F944
-	cry2 Cry_Slugma  @ 869F950
-	cry2 Cry_Magcargo  @ 869F95C
-	cry2 Cry_Swinub  @ 869F968
-	cry2 Cry_Piloswine  @ 869F974
-	cry2 Cry_Corsola  @ 869F980
-	cry2 Cry_Remoraid  @ 869F98C
-	cry2 Cry_Octillery  @ 869F998
-	cry2 Cry_Delibird  @ 869F9A4
-	cry2 Cry_Mantine  @ 869F9B0
-	cry2 Cry_Skarmory  @ 869F9BC
-	cry2 Cry_Houndour  @ 869F9C8
-	cry2 Cry_Houndoom  @ 869F9D4
-	cry2 Cry_Kingdra  @ 869F9E0
-	cry2 Cry_Phanpy  @ 869F9EC
-	cry2 Cry_Donphan  @ 869F9F8
-	cry2 Cry_Porygon2  @ 869FA04
-	cry2 Cry_Stantler  @ 869FA10
-	cry2 Cry_Smeargle  @ 869FA1C
-	cry2 Cry_Tyrogue  @ 869FA28
-	cry2 Cry_Hitmontop  @ 869FA34
-	cry2 Cry_Smoochum  @ 869FA40
-	cry2 Cry_Elekid  @ 869FA4C
-	cry2 Cry_Magby  @ 869FA58
-	cry2 Cry_Miltank  @ 869FA64
-	cry2 Cry_Blissey  @ 869FA70
-	cry2 Cry_Raikou  @ 869FA7C
-	cry2 Cry_Entei  @ 869FA88
-	cry2 Cry_Suicune  @ 869FA94
-	cry2 Cry_Larvitar  @ 869FAA0
-	cry2 Cry_Pupitar  @ 869FAAC
-	cry2 Cry_Tyranitar  @ 869FAB8
-	cry2 Cry_Lugia  @ 869FAC4
-	cry2 Cry_HoOh  @ 869FAD0
-	cry2 Cry_Celebi  @ 869FADC
-	cry2 Cry_Treecko
-	cry2 Cry_Grovyle
-	cry2 Cry_Sceptile
-	cry2 Cry_Torchic
-	cry2 Cry_Combusken
-	cry2 Cry_Blaziken
-	cry2 Cry_Mudkip
-	cry2 Cry_Marshtomp
-	cry2 Cry_Swampert
-	cry2 Cry_Poochyena
-	cry2 Cry_Mightyena
-	cry2 Cry_Zigzagoon
-	cry2 Cry_Linoone
-	cry2 Cry_Wurmple
-	cry2 Cry_Silcoon
-	cry2 Cry_Beautifly
-	cry2 Cry_Cascoon
-	cry2 Cry_Dustox
-	cry2 Cry_Lotad
-	cry2 Cry_Lombre
-	cry2 Cry_Ludicolo
-	cry2 Cry_Seedot
-	cry2 Cry_Nuzleaf
-	cry2 Cry_Shiftry
-	cry2 Cry_Taillow
-	cry2 Cry_Swellow
-	cry2 Cry_Wingull
-	cry2 Cry_Pelipper
-	cry2 Cry_Ralts
-	cry2 Cry_Kirlia
-	cry2 Cry_Gardevoir
-	cry2 Cry_Surskit
-	cry2 Cry_Masquerain
-	cry2 Cry_Shroomish
-	cry2 Cry_Breloom
-	cry2 Cry_Slakoth
-	cry2 Cry_Vigoroth
-	cry2 Cry_Slaking
-	cry2 Cry_Nincada
-	cry2 Cry_Ninjask
-	cry2 Cry_Shedinja
-	cry2 Cry_Whismur
-	cry2 Cry_Loudred
-	cry2 Cry_Exploud
-	cry2 Cry_Makuhita
-	cry2 Cry_Hariyama
-	cry2 Cry_Azurill
-	cry2 Cry_Nosepass
-	cry2 Cry_Skitty
-	cry2 Cry_Delcatty
-	cry2 Cry_Sableye
-	cry2 Cry_Mawile
-	cry2 Cry_Aron
-	cry2 Cry_Lairon
-	cry2 Cry_Aggron
-	cry2 Cry_Meditite
-	cry2 Cry_Medicham
-	cry2 Cry_Electrike
-	cry2 Cry_Manectric
-	cry2 Cry_Plusle
-	cry2 Cry_Minun
-	cry2 Cry_Volbeat
-	cry2 Cry_Illumise
-	cry2 Cry_Roselia
-	cry2 Cry_Gulpin
-	cry2 Cry_Swalot
-	cry2 Cry_Carvanha
-	cry2 Cry_Sharpedo
-	cry2 Cry_Wailmer
-	cry2 Cry_Wailord
-	cry2 Cry_Numel
-	cry2 Cry_Camerupt
-	cry2 Cry_Torkoal
-	cry2 Cry_Spoink
-	cry2 Cry_Grumpig
-	cry2 Cry_Spinda
-	cry2 Cry_Trapinch
-	cry2 Cry_Vibrava
-	cry2 Cry_Flygon
-	cry2 Cry_Cacnea
-	cry2 Cry_Cacturne
-	cry2 Cry_Swablu
-	cry2 Cry_Altaria
-	cry2 Cry_Zangoose
-	cry2 Cry_Seviper
-	cry2 Cry_Lunatone
-	cry2 Cry_Solrock
-	cry2 Cry_Barboach
-	cry2 Cry_Whiscash
-	cry2 Cry_Corphish
-	cry2 Cry_Crawdaunt
-	cry2 Cry_Baltoy
-	cry2 Cry_Claydol
-	cry2 Cry_Lileep
-	cry2 Cry_Cradily
-	cry2 Cry_Anorith
-	cry2 Cry_Armaldo
-	cry2 Cry_Feebas
-	cry2 Cry_Milotic
-	cry2 Cry_Castform
-	cry2 Cry_Kecleon
-	cry2 Cry_Shuppet
-	cry2 Cry_Banette
-	cry2 Cry_Duskull
-	cry2 Cry_Dusclops
-	cry2 Cry_Tropius
-	cry2 Cry_Chimecho
-	cry2 Cry_Absol
-	cry2 Cry_Wynaut
-	cry2 Cry_Snorunt
-	cry2 Cry_Glalie
-	cry2 Cry_Spheal
-	cry2 Cry_Sealeo
-	cry2 Cry_Walrein
-	cry2 Cry_Clamperl
-	cry2 Cry_Huntail
-	cry2 Cry_Gorebyss
-	cry2 Cry_Relicanth
-	cry2 Cry_Luvdisc
-	cry2 Cry_Bagon
-	cry2 Cry_Shelgon
-	cry2 Cry_Salamence
-	cry2 Cry_Beldum
-	cry2 Cry_Metang
-	cry2 Cry_Metagross
-	cry2 Cry_Regirock
-	cry2 Cry_Regice
-	cry2 Cry_Registeel
-	cry2 Cry_Latias
-	cry2 Cry_Latios
-	cry2 Cry_Kyogre
-	cry2 Cry_Groudon
-	cry2 Cry_Rayquaza
-	cry2 Cry_Jirachi
-	cry2 Cry_Deoxys
-	cry2 Cry_Turtwig
-	cry2 Cry_Grotle
-	cry2 Cry_Torterra
-	cry2 Cry_Chimchar
-	cry2 Cry_Monferno
-	cry2 Cry_Infernape
-	cry2 Cry_Piplup
-	cry2 Cry_Prinplup
-	cry2 Cry_Empoleon
-	cry2 Cry_Starly
-	cry2 Cry_Staravia
-	cry2 Cry_Staraptor
-	cry2 Cry_Bidoof
-	cry2 Cry_Bibarel
-	cry2 Cry_Kricketot
-	cry2 Cry_Kricketune
-	cry2 Cry_Shinx
-	cry2 Cry_Luxio
-	cry2 Cry_Luxray
-	cry2 Cry_Budew
-	cry2 Cry_Roserade
-	cry2 Cry_Cranidos
-	cry2 Cry_Rampardos
-	cry2 Cry_Shieldon
-	cry2 Cry_Bastiodon
-	cry2 Cry_Burmy
-	cry2 Cry_Wormadam
+	cry Cry_LilyWhite
+	cry Cry_LilyWhite
+	cry Cry_LilyBlack
+	cry Cry_LilyBlack
+	cry Cry_Momiji
+	cry Cry_Momiji
+	cry Cry_Shizuha
+	cry Cry_Shizuha
+	cry Cry_Medicine
+	cry Cry_Medicine
+	cry Cry_Koakuma
+	cry Cry_Koakuma
+	cry Cry_Nazrin
+	cry Cry_Nazrin
+	cry Cry_Tokiko
+	cry Cry_Tokiko
+	cry Cry_Remilia
+	cry Cry_Remilia
+	cry Cry_Cirno
+	cry Cry_Cirno
+	cry Cry_Rumia
+	cry Cry_Rumia
+	cry Cry_AliceDolls
+	cry Cry_Flandre
+	cry Cry_Flandre
+	cry Cry_AliceDolls
+	cry Cry_Youmu
+	cry Cry_Youmu
+	cry Cry_Yukari
+	cry Cry_Yukari
+	cry Cry_Suika
+	cry Cry_Suika
+	cry Cry_Mystia
+	cry Cry_Mystia
+	cry Cry_Minoriko
+	cry Cry_Minoriko
+	cry Cry_Keine
+	cry Cry_Keine
+	cry Cry_KeineB
+	cry Cry_Iku
+	cry Cry_Iku
+	cry Cry_Koishi
+	cry Cry_Koishi
+	cry Cry_Yamame
+	cry Cry_Yamame
+	cry Cry_Chen
+	cry Cry_Chen
+	cry Cry_Yorihime
+	cry Cry_Yorihime
+	cry Cry_Kaguya
+	cry Cry_Kaguya
+	cry Cry_Mokou
+	cry Cry_Mokou
+	cry Cry_Hatate
+	cry Cry_Hatate
+	cry Cry_Letty
+	cry Cry_Letty
+	cry Cry_Patchouli
+	cry Cry_Patchouli
+	cry Cry_Yuugi
+	cry Cry_Yuugi
+	cry Cry_Tenshi
+	cry Cry_Tenshi
+	cry Cry_Parsee
+	cry Cry_Parsee
+	cry Cry_Murasa
+	cry Cry_Murasa
+	cry Cry_Kisume
+	cry Cry_Kisume
+	cry Cry_Kogasa
+	cry Cry_Kogasa
+	cry Cry_Satori
+	cry Cry_Satori
+	cry Cry_Eirin
+	cry Cry_Eirin
+	cry Cry_Ran
+	cry Cry_Ran
+	cry Cry_Daiyousei
+	cry Cry_Daiyousei
+	cry Cry_Nitori
+	cry Cry_Nitori
+	cry Cry_Hina
+	cry Cry_Hina
+	cry Cry_Komachi
+	cry Cry_Komachi
+	cry Cry_Yuyuko
+	cry Cry_Yuyuko
+	cry Cry_Meiling
+	cry Cry_Meiling
+	cry Cry_Sakuya
+	cry Cry_Sakuya
+	cry Cry_Lunasa
+	cry Cry_Lunasa
+	cry Cry_Merlin
+	cry Cry_Merlin
+	cry Cry_Lyrica
+	cry Cry_Lyrica
+	cry Cry_Layla
+	cry Cry_Layla
+	cry Cry_Kanako
+	cry Cry_Kanako
+	cry Cry_Rin
+	cry Cry_Rin
+	cry Cry_Utsuho
+	cry Cry_Utsuho
+	cry Cry_Ichirin
+	cry Cry_Ichirin
+	cry Cry_Sunny
+	cry Cry_Sunny
+	cry Cry_Luna
+	cry Cry_Luna
+	cry Cry_Star
+	cry Cry_Star
+	cry Cry_Yuuka
+	cry Cry_Yuuka
+	cry Cry_Aya
+	cry Cry_Aya
+	cry Cry_Eiki
+	cry Cry_Eiki
+	cry Cry_Shou
+	cry Cry_Shou
+	cry Cry_Wriggle
+	cry Cry_Wriggle
+	cry Cry_Tewi
+	cry Cry_Tewi
+	cry Cry_Kedama
+	cry Cry_Nue
+	cry Cry_Nue
+	cry Cry_Suwako
+	cry Cry_Suwako
+	cry Cry_ReisenTwo
+	cry Cry_Marisa
+	cry Cry_Marisa
+	cry Cry_Reimu
+	cry Cry_Reimu
+	cry Cry_Byakuren
+	cry Cry_Byakuren
+	cry Cry_Konngara
+	cry Cry_Kikuri
+	cry Cry_Yuugenma
+	cry Cry_Toyohime
+	cry Cry_Toyohime
+	cry Cry_AliceDolls
+	cry Cry_Sariel
+	cry Cry_Mamizou
+	cry Cry_Akyuu
+	cry Cry_Genji
+	cry Cry_Tori
+	cry Cry_Namazu
+	cry Cry_Elly
+	cry Cry_Elly
+	cry Cry_Orange
+	cry Cry_Orange
+	cry Cry_Youki
+	cry Cry_Chiyuri
+	cry Cry_Chiyuri
+	cry Cry_Yumemi
+	cry Cry_Yumemi
+	cry Cry_Ellen
+	cry Cry_Ellen
+	cry Cry_Kazami
+	cry Cry_Kazami
+	cry Cry_Meira
+	cry Cry_Meira
+	cry Cry_Sara
+	cry Cry_Sara
+	cry Cry_Louise
+	cry Cry_Louise
+	cry Cry_Margatroid
+	cry Cry_Margatroid
+	cry Cry_Kana
+	cry Cry_Kana
+	cry Cry_Hakurei
+	cry Cry_Hakurei
+	cry Cry_Kirisame
+	cry Cry_Kirisame
+	cry Cry_Kotohime
+	cry Cry_Kotohime
+	cry Cry_Yumeko
+	cry Cry_Yumeko
+	cry Cry_Shinki
+	cry Cry_Shinki
+	cry Cry_MimiChan
+	cry Cry_Ruukoto
+	cry Cry_Rika
+	cry Cry_Rika
+	cry Cry_Mugetsu
+	cry Cry_Mugetsu
+	cry Cry_Gengetsu
+	cry Cry_Gengetsu
+	cry Cry_Kurumi
+	cry Cry_Kurumi
+	cry Cry_Rikako
+	cry Cry_Rikako
+	cry Cry_Unown
+	cry Cry_Yuki
+	cry Cry_Yuki
+	cry Cry_Mai
+	cry Cry_Mai
+	cry Cry_Sunny
+	cry Cry_Luna
+	cry Cry_Star
+	cry Cry_Nitori
+	cry Cry_Nitori
+	cry Cry_Mokou
+	cry Cry_Mokou
+	cry Cry_Reisen
+	cry Cry_Reisen
+	cry Cry_Sakuya
+	cry Cry_Sakuya
+	cry Cry_Rumia
+	cry Cry_Rumia
+	cry Cry_Mystia
+	cry Cry_Mystia
+	cry Cry_Chen
+	cry Cry_Chen
+	cry Cry_Youmu
+	cry Cry_Youmu
+	cry Cry_Yuuka
+	cry Cry_Yuuka
+	cry Cry_Aya
+	cry Cry_Aya
+	cry Cry_Tenshi
+	cry Cry_Tenshi
+	cry Cry_Parsee
+	cry Cry_Parsee
+	cry Cry_Koishi
+	cry Cry_Koishi
+	cry Cry_Byakuren
+	cry Cry_Byakuren
+	cry Cry_Ichirin
+	cry Cry_Ichirin
+	cry Cry_Kanako
+	cry Cry_Kanako
+	cry Cry_Kaguya
+	cry Cry_Kaguya
+	cry Cry_Shingyoku
+	cry Cry_Tenma
+	cry Cry_DarkAlice
+	cry Cry_Utsuho
+	cry Cry_Utsuho
+	cry Cry_Momiji
+	cry Cry_Elis
+	cry Cry_Mima
+	cry Cry_Sendai
+	cry Cry_Kokoro
+	cry Cry_Kokoro
+	cry Cry_Vivit
+	cry Cry_Benben
+	cry Cry_Benben
+	cry Cry_Yatsuhashi
+	cry Cry_Sekibanki
+	cry Cry_Sekibanki
+	cry Cry_Kagerou
+	cry Cry_Kagerou
+	cry Cry_Wakasagi
+	cry Cry_Wakasagi
+	cry Cry_Seija
+	cry Cry_Yatsuhashi
+	cry Cry_Raiko
+	cry Cry_Raiko
+	cry Cry_Sukuna
+	cry Cry_Sukuna
+	cry Cry_Kosuzu
+	cry Cry_Seija
+	cry Cry_Kosuzu
+	cry Cry_Sumireko
+	cry Cry_Sumireko
+	cry Cry_Kasen
+	cry Cry_Kasen
+	cry Cry_Komachi
+	cry Cry_Komachi
+	cry Cry_Eirin
+	cry Cry_Eirin
+	cry Cry_Yukari
+	cry Cry_Yukari
+	cry Cry_Alice
+	cry Cry_Alice
+	cry Cry_Reimu
+	cry Cry_Reimu
+	cry Cry_Cirno
+	cry Cry_Cirno
+	cry Cry_Yuyuko
+	cry Cry_Yuyuko
+	cry Cry_Lunasa
+	cry Cry_Merlin
+	cry Cry_Lyrica
+	cry Cry_Ran
+	cry Cry_Ran
+	cry Cry_Medicine
+	cry Cry_Medicine
+	cry Cry_Hina
+	cry Cry_Hina
+	cry Cry_Shizuha
+	cry Cry_Rin
+	cry Cry_Rin
+	cry Cry_ZombieF
+	cry Cry_Shizuha
+	cry Cry_Suwako
+	cry Cry_Shou
+	cry Cry_Shou
+	cry Cry_Tokiko
+	cry Cry_Suwako
+	cry Cry_Yamame
+	cry Cry_Kogasa
+	cry Cry_Kogasa
+	cry Cry_Remilia
+	cry Cry_Flandre
+	cry Cry_Wriggle
+	cry Cry_Meiling
+	cry Cry_Tensoku
+	cry Cry_Sunny
+	cry Cry_Luna
+	cry Cry_Wriggle
+	cry Cry_Koakuma
+	cry Cry_Meiling
+	cry Cry_Elis
+	cry Cry_Sariel
+	cry Cry_AdMystia
+	cry Cry_Hatate
+	cry Cry_Hatate
+	cry Cry_AkiSisters
+	cry Cry_Layla
+	cry Cry_KeineB
+	cry Cry_Remilia
+	cry Cry_Tewi
+	cry Cry_Tewi
+	cry Cry_Eiki
+	cry Cry_Minoriko
+	cry Cry_Suika
+	cry Cry_Sanae
+	cry Cry_Sanae
+	cry Cry_Flandre
+	cry Cry_Daiyousei
+	cry Cry_Mamizou
+	cry Cry_Kyouko
+	cry Cry_Kyouko
+	cry Cry_Eiki
+	cry Cry_Toyohime
+	cry Cry_Yoshika
+	cry Cry_Yoshika
+	cry Cry_Konngara
+	cry Cry_Yuugenma
+	cry Cry_Suika
+	cry Cry_LilyWhite
+	cry Cry_LilyBlack
+	cry Cry_Nue
+	cry Cry_Nue
+	cry Cry_Patchouli
+	cry Cry_Letty
+	cry Cry_Letty
+	cry Cry_Yorihime
+	cry Cry_Shingyoku
+	cry Cry_Seiga
+	cry Cry_Yuugi
+	cry Cry_Nazrin
+	cry Cry_Nazrin
+	cry Cry_Kisume
+	cry Cry_Yuugi
+	cry Cry_Keine
+	cry Cry_Tojiko
+	cry Cry_Iku
+	cry Cry_Iku
+	cry Cry_Minoriko
+	cry Cry_Rinnosuke
+	cry Cry_AdCirno
+	cry Cry_AdReisen
+	cry Cry_Tojiko
+	cry Cry_Sariel
+	cry Cry_LilyWhite
+	cry Cry_Mima
+	cry Cry_Kikuri
+	cry Cry_AdMeiling
+	cry Cry_Patchouli
+	cry Cry_Marisa
+	cry Cry_Marisa
+	cry Cry_Futo
+	cry Cry_Murasa
+	cry Cry_Murasa
+	cry Cry_Star
+	cry Cry_Kazami
+	cry Cry_Medicine
+	cry Cry_Daiyousei
+	cry Cry_Yamame
+	cry Cry_Satori
+	cry Cry_Satori
+	cry Cry_AdLetty
+	cry Cry_AdTewi
+	cry Cry_AdMarisa
+	cry Cry_AdAlice
+	cry Cry_AdMokou
+	cry Cry_AdYukari
+	cry Cry_AdRan
+	cry Cry_AdChen
+	cry Cry_Futo
+	cry Cry_Suwako
+	cry Cry_Utsuho
+	cry Cry_Kanako
+	cry Cry_Shingyoku
+	cry Cry_Shingyoku
+	cry Cry_Miko
+	cry Cry_Ayakashi
+	cry Cry_Miko
+	cry Cry_Tenma
+	cry Cry_Sendai
+	cry Cry_Vivit
+	cry Cry_AVIVIT
 	cry2 Cry_Mothim
 	cry2 Cry_Combee
 	cry2 Cry_Vespiquen
@@ -2224,62 +2226,62 @@ gCryTable2:: @ 869EF24
 	cry2_uncomp Cry_RayquazaMega
 	cry2_uncomp Cry_KyogrePrimal
 	cry2_uncomp Cry_GroudonPrimal
-	@ Alolan Forms
-	cry2 Cry_Rattata
-	cry2 Cry_Raticate
-	cry2 Cry_Raichu
-	cry2 Cry_Sandshrew
-	cry2 Cry_Sandslash
-	cry2 Cry_Vulpix
-	cry2 Cry_Ninetales
-	cry2 Cry_Diglett
-	cry2 Cry_Dugtrio
-	cry2 Cry_Meowth
-	cry2 Cry_Persian
-	cry2 Cry_Geodude
-	cry2 Cry_Graveler
-	cry2 Cry_Golem
-	cry2 Cry_Grimer
-	cry2 Cry_Muk
-	cry2 Cry_Exeggutor
-	cry2 Cry_Marowak
+		@ Alolan Forms
+	cry Cry_Nazrin
+	cry Cry_Nazrin
+	cry Cry_Cirno
+	cry Cry_Rumia
+	cry Cry_Rumia
+	cry Cry_Suika
+	cry Cry_Suika
+	cry Cry_Yamame
+	cry Cry_Yamame
+	cry Cry_Chen
+	cry Cry_Chen
+	cry Cry_Kisume
+	cry Cry_Kisume
+	cry Cry_Kogasa
+	cry Cry_Hina
+	cry Cry_Hina
+	cry Cry_Lyrica
+	cry Cry_Layla
 	@ Galarian Forms
-	cry2 Cry_Meowth
-	cry2 Cry_Ponyta
-	cry2 Cry_Rapidash
-	cry2_uncomp Cry_SlowpokeGalarian
-	cry2 Cry_Slowbro
-	cry2 Cry_Farfetchd
-	cry2 Cry_Weezing
-	cry2 Cry_MrMime
-	cry2 Cry_Articuno
-	cry2 Cry_Zapdos
-	cry2 Cry_Moltres
-	cry2 Cry_Slowking
-	cry2 Cry_Corsola
-	cry2 Cry_Zigzagoon
-	cry2 Cry_Linoone
-	cry2 Cry_Darumaka
-	cry2 Cry_Darmanitan
-	cry2 Cry_Yamask
-	cry2 Cry_Stunfisk
+	cry Cry_Chen
+	cry Cry_Kogasa
+	cry Cry_Satori
+	cry_uncomp Cry_SlowpokeGalarian
+	cry Cry_Eirin
+	cry Cry_Ran
+	cry Cry_Utsuho
+	cry Cry_Aya
+	cry Cry_Konngara
+	cry Cry_Kikuri
+	cry Cry_Yuugenma
+	cry Cry_Slowking
+	cry Cry_Corsola
+	cry Cry_Zigzagoon
+	cry Cry_Linoone
+	cry Cry_Darumaka
+	cry Cry_Darmanitan
+	cry Cry_Yamask
+	cry Cry_Stunfisk
 	@ Misc Forms
 	@ Cosplay Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
 	@ Cap Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
-	cry2 Cry_Pikachu
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
+	cry Cry_Cirno  @ 869DE14
 	@ Pichu
 	cry2 Cry_Pichu
 	@ Unown
