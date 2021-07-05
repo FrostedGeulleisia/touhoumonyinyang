@@ -1960,6 +1960,7 @@ static bool8 Fishing_NotEvenNibble(struct Task *task)
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     AddTextPrinterParameterized2(0, 1, gText_NotEvenANibble, 1, 0, 2, 1, 3);
     task->tStep = FISHING_SHOW_RESULT;
+	gChainFishingStreak = 0;
     return TRUE;
 }
 
@@ -1970,6 +1971,7 @@ static bool8 Fishing_GotAway(struct Task *task)
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     AddTextPrinterParameterized2(0, 1, gText_ItGotAway, 1, 0, 2, 1, 3);
     task->tStep++;
+	gChainFishingStreak = 0;
     return TRUE;
 }
 
