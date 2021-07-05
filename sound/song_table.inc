@@ -352,7 +352,7 @@ gSongTable:: @ 86B49F0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song mus_vs_test, 0, 0
-	song mus_gsc_route38, 0, 0
+	song mus_dungeon_test, 0, 0
 	song mus_caught, 0, 0
 	song mus_victory_wild, 0, 0
 	song mus_victory_gym_leader, 0, 0
