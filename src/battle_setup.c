@@ -67,7 +67,7 @@ struct TrainerBattleParameter
 // this file's functions
 static void DoBattlePikeWildBattle(void);
 static void DoSafariBattle(void);
-static void DoStandardWildBattle(bool32 isDouble);
+static void DoStandardWildBattle(bool32 isDouble, u32 battleFlags, MainCallback afterbattleCallback);
 static void CB2_EndWildBattle(void);
 static void CB2_EndScriptedWildBattle(void);
 static void TryUpdateGymLeaderRematchFromWild(void);
@@ -385,12 +385,12 @@ void BattleSetup_StartWildBattle(void)
     if (GetSafariZoneFlag())
         DoSafariBattle();
     else
-        DoStandardWildBattle(FALSE);
+        DoStandardWildBattle(FALSE, 0, CB2_EndWildBattle);
 }
 
 void BattleSetup_StartDoubleWildBattle(void)
 {
-    DoStandardWildBattle(TRUE);
+    DoStandardWildBattle(TRUE, 0, CB2_EndWildBattle);
 }
 
 void BattleSetup_StartBattlePikeWildBattle(void)
@@ -398,13 +398,13 @@ void BattleSetup_StartBattlePikeWildBattle(void)
     DoBattlePikeWildBattle();
 }
 
-static void DoStandardWildBattle(bool32 isDouble)
+static void DoStandardWildBattle(bool32 isDouble, u32 battleFlags, MainCallback afterbattleCallback) //Thanks Reddo for helping me make the Groudon/Kyogre/Rayquaza battle terrains show up only if BATTLE_TYPE_LEGENDARY is set alongside their unique battle types!
 {
     ScriptContext2_Enable();
     FreezeObjectEvents();
     sub_808BCF4();
-    gMain.savedCallback = CB2_EndWildBattle;
-    gBattleTypeFlags = 0;
+    gMain.savedCallback = afterbattleCallback;
+	gBattleTypeFlags = battleFlags;
     if (isDouble)
         gBattleTypeFlags |= BATTLE_TYPE_DOUBLE;
     if (InBattlePyramid())
@@ -412,7 +412,46 @@ static void DoStandardWildBattle(bool32 isDouble)
         VarSet(VAR_TEMP_E, 0);
         gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
     }
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+
+    switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL)) //All the legendary checks from BattleSetup_StartLegendaryBattle were moved here, so they can activate if the 'mon was encountered normally in the wild, gens 4 and 5 handle it this way. Checks for the Regis and Mewtwo were added too, as they were absent (Mewtwo has a unique battle theme so why not).
+    {
+    case SPECIES_GROUDON:
+        gBattleTypeFlags |= BATTLE_TYPE_GROUDON;
+        CreateBattleStartTask(B_TRANSITION_KYOGRE, MUS_VS_KYOGRE_GROUDON); //for some reason, B_TRANSITION_GROUDON here actually uses Kyogre's transition.
+        break;
+    case SPECIES_KYOGRE:
+        gBattleTypeFlags |= BATTLE_TYPE_KYOGRE;
+        CreateBattleStartTask(B_TRANSITION_GROUDON, MUS_VS_KYOGRE_GROUDON); //Same as Groudon's case but in reverse.
+        break;
+    case SPECIES_RAYQUAZA:
+        gBattleTypeFlags |= BATTLE_TYPE_RAYQUAZA;
+        CreateBattleStartTask(B_TRANSITION_RAYQUAZA, MUS_VS_RAYQUAZA);
+        break;
+    case SPECIES_DEOXYS:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
+        break;
+	case SPECIES_REGIROCK:
+		CreateBattleStartTask(B_TRANSITION_REGIROCK, MUS_VS_REGI);
+		break;
+	case SPECIES_REGICE:
+		CreateBattleStartTask(B_TRANSITION_REGICE, MUS_VS_REGI);
+		break;
+	case SPECIES_REGISTEEL:
+		CreateBattleStartTask(B_TRANSITION_REGISTEEL, MUS_VS_REGI);
+		break;
+    case SPECIES_LUGIA:
+    case SPECIES_HO_OH:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
+        break;
+    case SPECIES_MEW:
+        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
+        break;
+	case SPECIES_MEWTWO:
+		CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_RG_VS_MEWTWO);
+		break;
+	default:
+	    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    }
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
@@ -426,7 +465,7 @@ void BattleSetup_StartRoamerBattle(void)
     sub_808BCF4();
     gMain.savedCallback = CB2_EndWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_ROAMER;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    CreateBattleStartTask(GetWildBattleTransition(), MUS_RG_VS_WILD); //Gotta give the roamers a little flavor too.
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
@@ -516,50 +555,23 @@ void BattleSetup_StartLatiBattle(void)
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    CreateBattleStartTask(GetWildBattleTransition(), MUS_RG_VS_WILD); //Same treatment for the static Latis.
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();
     TryUpdateGymLeaderRematchFromWild();
 }
 
-void BattleSetup_StartLegendaryBattle(void)
+void BattleSetup_StartLegendaryBattle(void) //These were commented out temponairly as they seemed redundant, turns out the game softlocks without these.
 {
     ScriptContext2_Enable();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
-
-    switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
-    {
-    default:
-    case SPECIES_GROUDON:
-        gBattleTypeFlags |= BATTLE_TYPE_GROUDON;
-        CreateBattleStartTask(B_TRANSITION_GROUDON, MUS_VS_KYOGRE_GROUDON);
-        break;
-    case SPECIES_KYOGRE:
-        gBattleTypeFlags |= BATTLE_TYPE_KYOGRE;
-        CreateBattleStartTask(B_TRANSITION_KYOGRE, MUS_VS_KYOGRE_GROUDON);
-        break;
-    case SPECIES_RAYQUAZA:
-        gBattleTypeFlags |= BATTLE_TYPE_RAYQUAZA;
-        CreateBattleStartTask(B_TRANSITION_RAYQUAZA, MUS_VS_RAYQUAZA);
-        break;
-    case SPECIES_DEOXYS:
-        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
-        break;
-    case SPECIES_LUGIA:
-    case SPECIES_HO_OH:
-        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
-        break;
-    case SPECIES_MEW:
-        CreateBattleStartTask(B_TRANSITION_GRID_SQUARES, MUS_VS_MEW);
-        break;
-    }
-
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    IncrementDailyWildBattles();
-    TryUpdateGymLeaderRematchFromWild();
+	DoStandardWildBattle(FALSE, BATTLE_TYPE_LEGENDARY, CB2_EndScriptedWildBattle);
+// restore code here if shit breaks
+//    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+//    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+//    IncrementDailyWildBattles();
+//    TryUpdateGymLeaderRematchFromWild();
 }
 
 void StartGroudonKyogreBattle(void)
