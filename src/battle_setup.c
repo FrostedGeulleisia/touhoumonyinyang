@@ -565,7 +565,6 @@ void BattleSetup_StartLatiBattle(void)
 void BattleSetup_StartLegendaryBattle(void) //These were commented out temponairly as they seemed redundant, turns out the game softlocks without these.
 {
     ScriptContext2_Enable();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
 	DoStandardWildBattle(FALSE, BATTLE_TYPE_LEGENDARY, CB2_EndScriptedWildBattle);
 // restore code here if shit breaks
 //    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
