@@ -587,7 +587,7 @@ static void CB2_CreateTradeMenu(void)
         sTradeMenuData->bg3hofs = 0;
         SetTradePartyMonsVisible();
         gMain.state++;
-        PlayBGM(MUS_SCHOOL);
+        PlayBGM(MUS_RG_GAME_CORNER);
         break;
     case 15:
         SetTradePartyLiveStatuses(TRADE_PARTNER);
@@ -3332,7 +3332,7 @@ static bool8 AnimateTradeSequenceCable(void)
         gSprites[sTradeData->monSpriteIds[TRADE_PLAYER]].pos2.y = gMonFrontPicCoords[sTradeData->monSpecies[TRADE_PLAYER]].y_offset;
         sTradeData->state++;
         sTradeData->cachedMapMusic = GetCurrentMapMusic();
-        PlayNewMapMusic(MUS_EVOLUTION);
+        PlayNewMapMusic(MUS_TRADING);
         break;
     case TS_STATE_MON_SLIDE_IN:
         if (sTradeData->bg2hofs > 0)
@@ -3805,7 +3805,7 @@ static bool8 AnimateTradeSequenceWireless(void)
         gSprites[sTradeData->monSpriteIds[TRADE_PLAYER]].pos2.y = gMonFrontPicCoords[sTradeData->monSpecies[TRADE_PLAYER]].y_offset;
         sTradeData->state++;
         sTradeData->cachedMapMusic = GetCurrentMapMusic();
-        PlayNewMapMusic(MUS_EVOLUTION);
+        PlayNewMapMusic(MUS_TRADING);
         break;
     case TS_STATE_MON_SLIDE_IN:
         if (sTradeData->bg2hofs > 0)

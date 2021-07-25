@@ -358,7 +358,7 @@ gSongTable:: @ 86B49F0
 	song mus_victory_gym_leader, 0, 0
 	song mus_victory_league, 0, 0
 	song mus_dungeon_test2, 0, 0
-	song mus_gsc_pewter, 0, 0
+	song mus_trading, 0, 0
 	song mus_c_vs_legend_beast, 0, 0
 	song mus_route101, 0, 0
 	song mus_route110, 0, 0

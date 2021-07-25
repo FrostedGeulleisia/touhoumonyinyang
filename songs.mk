@@ -43,7 +43,7 @@ $(MID_SUBDIR)/mus_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G119 -V080 -P1
 
 $(MID_SUBDIR)/mus_vs_wild.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G157 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V080 -P1
 
 $(MID_SUBDIR)/mus_vs_aqua_magma_leader.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G126 -V080 -P1
@@ -306,8 +306,8 @@ $(MID_SUBDIR)/mus_surf.s: %.s: %.mid
 $(MID_SUBDIR)/mus_route104.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G047 -V097
 
-$(MID_SUBDIR)/mus_gsc_pewter.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -V080
+$(MID_SUBDIR)/mus_trading.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G026 -V080
 
 $(MID_SUBDIR)/mus_birch_lab.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G033 -V080
@@ -619,7 +619,7 @@ $(MID_SUBDIR)/mus_mt_chimney.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G052 -V078
 
 $(MID_SUBDIR)/mus_follow_me.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G066 -V074
+	$(MID) $< $@ -E -R$(STD_REVERB) -G131 -V074
 
 $(MID_SUBDIR)/mus_vs_frontier_brain.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G115 -V090 -P1

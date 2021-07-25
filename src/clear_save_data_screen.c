@@ -75,6 +75,7 @@ void CB2_InitClearSaveDataScreen(void)
 {
     if (SetupClearSaveDataScreen())
         CreateTask(Task_DoClearSaveDataScreenYesNo, 0);
+	PlayBGM(MUS_RG_ENCOUNTER_DEOXYS);
 }
 
 static void Task_DoClearSaveDataScreenYesNo(u8 taskId)
