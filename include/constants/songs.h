@@ -289,7 +289,7 @@
 #define MUS_VICTORY_GYM_LEADER      354 // MUS_KACHI3
 #define MUS_VICTORY_LEAGUE          355 // MUS_KACHI5
 #define MUS_DUNGEON_TEST2           356 // MUS_DUNTEST2
-#define MUS_GSC_PEWTER              357 // MUS_NIBI
+#define MUS_TRADING                 357 // MUS_KOUKAN
 #define MUS_C_VS_LEGEND_BEAST       358 // MUS_SUIKUN
 #define MUS_ROUTE101                359 // MUS_DOORO1
 #define MUS_ROUTE110                360 // MUS_DOORO_X1

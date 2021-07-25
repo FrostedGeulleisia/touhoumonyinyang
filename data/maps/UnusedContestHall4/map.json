@@ -2,7 +2,7 @@
   "id": "MAP_UNUSED_CONTEST_HALL4",
   "name": "UnusedContestHall4",
   "layout": "LAYOUT_UNUSED_CONTEST_HALL4",
-  "music": "MUS_GSC_PEWTER",
+  "music": "MUS_DUNGEON_TEST2",
   "region_map_section": "MAPSEC_DYNAMIC",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
