@@ -102,6 +102,7 @@ enum { // Flags
     DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF,
     DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF,
     DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF,
+    DEBUG_FLAG_MENU_ITEM_MUSCHANGE_ONOFF,
 };
 enum { // Vars
     DEBUG_VARS_MENU_ITEM_VARS,
@@ -230,6 +231,7 @@ static void DebugAction_Flags_EncounterOnOff(u8);
 static void DebugAction_Flags_TrainerSeeOnOff(u8);
 static void DebugAction_Flags_BagUseOnOff(u8);
 static void DebugAction_Flags_CatchingOnOff(u8);
+static void DebugAction_Flags_MusChangeOnOff(u8);
 
 static void DebugAction_Vars_Vars(u8 taskId);
 static void DebugAction_Vars_Select(u8 taskId);
@@ -334,6 +336,7 @@ static const u8 gDebugText_Flags_SwitchEncounter[] =        _("Encounter ON/OFF"
 static const u8 gDebugText_Flags_SwitchTrainerSee[] =       _("TrainerSee ON/OFF");
 static const u8 gDebugText_Flags_SwitchBagUse[] =           _("BagUse ON/OFF");
 static const u8 gDebugText_Flags_SwitchCatching[] =         _("Catching ON/OFF");
+static const u8 gDebugText_Flags_SwitchMusChange[] =        _("MusChange ON/OFF");
 static const u8 gDebugText_Flags_Flag[] =                   _("Flag: {STR_VAR_1}   \n{STR_VAR_2}                   \n{STR_VAR_3}");
 static const u8 gDebugText_Flags_FlagHex[] =                _("{STR_VAR_1}           \n0x{STR_VAR_2}             ");
 static const u8 gDebugText_Flags_FlagSet[] =                _("TRUE");
@@ -465,6 +468,7 @@ static const struct ListMenuItem sDebugMenu_Items_Flags[] =
     [DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF]= {gDebugText_Flags_SwitchTrainerSee,    DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF},
     [DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF]    = {gDebugText_Flags_SwitchBagUse,        DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF},
     [DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF]   = {gDebugText_Flags_SwitchCatching,      DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF},
+    [DEBUG_FLAG_MENU_ITEM_MUSCHANGE_ONOFF]   = {gDebugText_Flags_SwitchMusChange,    DEBUG_FLAG_MENU_ITEM_MUSCHANGE_ONOFF},
 };
 static const struct ListMenuItem sDebugMenu_Items_Vars[] =
 {
@@ -542,6 +546,7 @@ static void (*const sDebugMenu_Actions_Flags[])(u8) =
     [DEBUG_FLAG_MENU_ITEM_TRAINER_SEE_ONOFF]= DebugAction_Flags_TrainerSeeOnOff,
     [DEBUG_FLAG_MENU_ITEM_BAG_USE_ONOFF]    = DebugAction_Flags_BagUseOnOff,
     [DEBUG_FLAG_MENU_ITEM_CATCHING_ONOFF]   = DebugAction_Flags_CatchingOnOff,
+    [DEBUG_FLAG_MENU_ITEM_MUSCHANGE_ONOFF]   = DebugAction_Flags_MusChangeOnOff,
 };
 static void (*const sDebugMenu_Actions_Vars[])(u8) =
 {
@@ -1471,6 +1476,18 @@ static void DebugAction_Flags_CatchingOnOff(u8 taskId)
         PlaySE(SE_PC_OFF);
     }else{
         FlagSet(FLAG_SYS_NO_CATCHING);
+        PlaySE(SE_PC_LOGIN);
+    }
+}
+
+static void DebugAction_Flags_MusChangeOnOff(u8 taskId)
+{
+    if(FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+    {
+        FlagClear(FLAG_DONT_TRANSITION_MUSIC);
+        PlaySE(SE_PC_OFF);
+    }else{
+        FlagSet(FLAG_DONT_TRANSITION_MUSIC);
         PlaySE(SE_PC_LOGIN);
     }
 }
@@ -2978,7 +2995,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_B_DOME, "MUS-B-DOME") \
     X(MUS_B_PIKE, "MUS-B-PIKE") \
     X(MUS_B_FACTORY, "MUS-B-FACTORY") \
-    X(MUS_VS_RAYQUAZA, "MUS-VS-RAYQUAZA") \
+    X(MUS_SCRATCHPAD, "MUS-SCRATCHPAD") \
     X(MUS_VS_FRONTIER_BRAIN, "MUS-VS-FRONTIER-BRAIN") \
     X(MUS_VS_MEW, "MUS-VS-MEW") \
     X(MUS_B_DOME_LOBBY, "MUS-B-DOME-LOBBY") \
@@ -3052,7 +3069,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_RG_MYSTERY_GIFT, "MUS-RG-MYSTERY-GIFT") \
     X(MUS_RG_BERRY_PICK, "MUS-RG-BERRY-PICK") \
     X(MUS_RG_SEVII_CAVE, "MUS-RG-SEVII-CAVE") \
-    X(MUS_RG_TEACHY_TV_SHOW, "MUS-RG-TEACHY-TV-SHOW") \
+    X(MUS_REVERSE_IDEOLOGY, "MUS-REVERSE-IDEOLOGY") \
     X(MUS_RG_SEVII_ROUTE, "MUS-RG-SEVII-ROUTE") \
     X(MUS_RG_SEVII_DUNGEON, "MUS-RG-SEVII-DUNGEON") \
     X(MUS_RG_SEVII_123, "MUS-RG-SEVII-123") \
@@ -3064,7 +3081,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_RG_VS_LEGEND, "MUS-RG-VS-LEGEND") \
     X(MUS_RG_ENCOUNTER_GYM_LEADER, "MUS-RG-ENCOUNTER-GYM-LEADER") \
     X(MUS_RG_ENCOUNTER_DEOXYS, "MUS-RG-ENCOUNTER-DEOXYS") \
-    X(MUS_RG_TRAINER_TOWER, "MUS-RG-TRAINER-TOWER") \
+    X(MUS_VS_TRAINER_WLD, "MUS-VS-TRAINER-WLD") \
     X(MUS_RG_SLOW_PALLET, "MUS-RG-SLOW-PALLET") \
     X(MUS_RG_TEACHY_TV_MENU, "MUS-RG-TEACHY-TV-MENU") \
     X(DP_SEQ_TITLE00    , "DP-SEQ-TITLE00") \

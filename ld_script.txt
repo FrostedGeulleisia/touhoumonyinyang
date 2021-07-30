@@ -1087,7 +1087,7 @@ SECTIONS {
         sound/songs/midi/mus_b_dome.o(.rodata);
         sound/songs/midi/mus_b_pike.o(.rodata);
         sound/songs/midi/mus_b_factory.o(.rodata);
-        sound/songs/midi/mus_vs_rayquaza.o(.rodata);
+        sound/songs/midi/mus_scratchpad.o(.rodata);
         sound/songs/midi/mus_vs_frontier_brain.o(.rodata);
         sound/songs/midi/mus_vs_mew.o(.rodata);
         sound/songs/midi/mus_b_dome_lobby.o(.rodata);
@@ -1161,7 +1161,7 @@ SECTIONS {
         sound/songs/midi/mus_rg_mystery_gift.o(.rodata);
         sound/songs/midi/mus_rg_berry_pick.o(.rodata);
         sound/songs/midi/mus_rg_sevii_cave.o(.rodata);
-        sound/songs/midi/mus_rg_teachy_tv_show.o(.rodata);
+        sound/songs/midi/mus_reverse_ideology.o(.rodata);
         sound/songs/midi/mus_rg_sevii_route.o(.rodata);
         sound/songs/midi/mus_rg_sevii_dungeon.o(.rodata);
         sound/songs/midi/mus_rg_sevii_123.o(.rodata);
@@ -1173,7 +1173,7 @@ SECTIONS {
         sound/songs/midi/mus_rg_vs_legend.o(.rodata);
         sound/songs/midi/mus_rg_encounter_gym_leader.o(.rodata);
         sound/songs/midi/mus_rg_encounter_deoxys.o(.rodata);
-        sound/songs/midi/mus_rg_trainer_tower.o(.rodata);
+        sound/songs/midi/mus_vs_trainer_wld.o(.rodata);
         sound/songs/midi/mus_rg_slow_pallet.o(.rodata);
         sound/songs/midi/mus_rg_teachy_tv_menu.o(.rodata);
         sound/songs/midi/ph_trap_blend.o(.rodata);

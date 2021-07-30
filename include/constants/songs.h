@@ -402,7 +402,7 @@
 #define MUS_B_DOME                  467 // MUS_B_DOME
 #define MUS_B_PIKE                  468 // MUS_B_TUBE
 #define MUS_B_FACTORY               469 // MUS_B_FACTORY
-#define MUS_VS_RAYQUAZA             470 // MUS_VS_REKKU (Identical to MUS_VS_KYOGRE_GROUDON)
+#define MUS_SCRATCHPAD              470 // MUS_SCRATCHPAD
 #define MUS_VS_FRONTIER_BRAIN       471 // MUS_VS_FRONT
 #define MUS_VS_MEW                  472 // MUS_VS_MEW
 #define MUS_B_DOME_LOBBY            473 // MUS_B_DOME1
@@ -477,7 +477,7 @@
 #define MUS_RG_MYSTERY_GIFT         541 // MUS_RG_OKURIMONO
 #define MUS_RG_BERRY_PICK           542 // MUS_RG_KINOMIKUI
 #define MUS_RG_SEVII_CAVE           543 // MUS_RG_NANADUNGEON (Identical to MUS_RG_MT_MOON)
-#define MUS_RG_TEACHY_TV_SHOW       544 // MUS_RG_OSHIE_TV (Identical to MUS_RG_FOLLOW_ME)
+#define MUS_REVERSE_IDEOLOGY        544 // MUS_SEIJA
 #define MUS_RG_SEVII_ROUTE          545 // MUS_RG_NANASHIMA
 #define MUS_RG_SEVII_DUNGEON        546 // MUS_RG_NANAISEKI (Identical to MUS_RG_VIRIDIAN_FOREST)
 #define MUS_RG_SEVII_123            547 // MUS_RG_NANA123 (Identical to MUS_RG_PEWTER)
@@ -489,7 +489,7 @@
 #define MUS_RG_VS_LEGEND            553 // MUS_RG_VS_DEN
 #define MUS_RG_ENCOUNTER_GYM_LEADER 554 // MUS_RG_EXEYE
 #define MUS_RG_ENCOUNTER_DEOXYS     555 // MUS_RG_DEOEYE
-#define MUS_RG_TRAINER_TOWER        556 // MUS_RG_T_TOWER
+#define MUS_VS_TRAINER_WLD          556 // MUS_YOUKAI_MT
 #define MUS_RG_SLOW_PALLET          557 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
 #define END_MUS                     MUS_RG_TEACHY_TV_MENU

@@ -7245,20 +7245,24 @@ u16 GetBattleBGM(void)
 }
 
 void PlayBattleBGM(void)
-{
-    ResetMapMusic();
-    m4aMPlayAllStop();
-    PlayBGM(GetBattleBGM());
+{	
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
+	ResetMapMusic();
+	m4aMPlayAllStop();
+	PlayBGM(GetBattleBGM());
 }
 
 void PlayMapChosenOrBattleBGM(u16 songId)
 {
-    ResetMapMusic();
-    m4aMPlayAllStop();
-    if (songId)
-        PlayNewMapMusic(songId);
-    else
-        PlayNewMapMusic(GetBattleBGM());
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
+	ResetMapMusic();
+	m4aMPlayAllStop();
+	if (songId)
+		PlayNewMapMusic(songId);
+	else
+		PlayNewMapMusic(GetBattleBGM());
 }
 
 // Identical to PlayMapChosenOrBattleBGM, but uses a task instead
@@ -7267,6 +7271,9 @@ void PlayMapChosenOrBattleBGM(u16 songId)
 void CreateTask_PlayMapChosenOrBattleBGM(u16 songId)
 {
     u8 taskId;
+	
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
 
     ResetMapMusic();
     m4aMPlayAllStop();
@@ -7276,7 +7283,10 @@ void CreateTask_PlayMapChosenOrBattleBGM(u16 songId)
 }
 
 static void Task_PlayMapChosenOrBattleBGM(u8 taskId)
-{
+{	
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
+	
     if (gTasks[taskId].tSongId)
         PlayNewMapMusic(gTasks[taskId].tSongId);
     else
