@@ -471,7 +471,7 @@ gSongTable:: @ 86B49F0
 	song mus_b_dome, 0, 0
 	song mus_b_pike, 0, 0
 	song mus_b_factory, 0, 0
-	song mus_vs_rayquaza, 0, 0
+	song mus_scratchpad, 0, 0
 	song mus_vs_frontier_brain, 0, 0
 	song mus_vs_mew, 0, 0
 	song mus_b_dome_lobby, 0, 0
@@ -545,7 +545,7 @@ gSongTable:: @ 86B49F0
 	song mus_rg_mystery_gift, 0, 0
 	song mus_rg_berry_pick, 0, 0
 	song mus_rg_sevii_cave, 0, 0
-	song mus_rg_teachy_tv_show, 0, 0
+	song mus_reverse_ideology, 0, 0
 	song mus_rg_sevii_route, 0, 0
 	song mus_rg_sevii_dungeon, 0, 0
 	song mus_rg_sevii_123, 0, 0
@@ -557,7 +557,7 @@ gSongTable:: @ 86B49F0
 	song mus_rg_vs_legend, 0, 0
 	song mus_rg_encounter_gym_leader, 0, 0
 	song mus_rg_encounter_deoxys, 0, 0
-	song mus_rg_trainer_tower, 0, 0
+	song mus_vs_trainer_wld, 0, 0
 	song mus_rg_slow_pallet, 0, 0
 	song mus_rg_teachy_tv_menu, 0, 0
 	song ph_trap_blend, 2, 2

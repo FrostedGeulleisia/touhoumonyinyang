@@ -47,6 +47,7 @@ PetalburgCity_EventScript_WallyTutorial:: @ 81DC32E
 	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WallyTutorialPlayer
 	waitmovement 0
 	msgbox Route102_Text_WatchMeCatchPokemon, MSGBOX_DEFAULT
+	clearflag FLAG_DONT_TRANSITION_MUSIC
 	special StartWallyTutorialBattle
 	waitstate
 	msgbox Route102_Text_WallyIDidIt, MSGBOX_DEFAULT
@@ -57,7 +58,6 @@ PetalburgCity_EventScript_WallyTutorial:: @ 81DC32E
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	setvar VAR_PETALBURG_CITY_STATE, 3
 	fadedefaultbgm
-	clearflag FLAG_DONT_TRANSITION_MUSIC
 	special LoadPlayerParty
 	setvar VAR_PETALBURG_GYM_STATE, 1
 	warp MAP_PETALBURG_CITY_GYM, 255, 4, 108

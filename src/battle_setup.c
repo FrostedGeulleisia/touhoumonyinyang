@@ -425,7 +425,7 @@ static void DoStandardWildBattle(bool32 isDouble, u32 battleFlags, MainCallback 
         break;
     case SPECIES_RAYQUAZA:
         gBattleTypeFlags |= BATTLE_TYPE_RAYQUAZA;
-        CreateBattleStartTask(B_TRANSITION_RAYQUAZA, MUS_VS_RAYQUAZA);
+        CreateBattleStartTask(B_TRANSITION_RAYQUAZA, MUS_VS_KYOGRE_GROUDON); //MUS_VS_RAYQUAZA is identical, and therefore, was overwritten
         break;
     case SPECIES_DEOXYS:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
@@ -475,25 +475,13 @@ void BattleSetup_StartRoamerBattle(void)
 static void DoSafariBattle(void)
 {
     ScriptContext2_Enable();
-    FreezeObjectEvents();
-    sub_808BCF4();
-    gMain.savedCallback = CB2_EndSafariBattle;
-    gBattleTypeFlags = BATTLE_TYPE_SAFARI;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    DoStandardWildBattle(FALSE, BATTLE_TYPE_SAFARI, CB2_EndSafariBattle);
 }
 
 static void DoBattlePikeWildBattle(void)
 {
     ScriptContext2_Enable();
-    FreezeObjectEvents();
-    sub_808BCF4();
-    gMain.savedCallback = CB2_EndWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_PIKE;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    IncrementDailyWildBattles();
-    TryUpdateGymLeaderRematchFromWild();
+    DoStandardWildBattle(FALSE, BATTLE_TYPE_PIKE, CB2_EndWildBattle);
 }
 
 static void DoTrainerBattle(void)
@@ -521,21 +509,13 @@ void StartWallyTutorialBattle(void)
 {
     CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
     ScriptContext2_Enable();
-    gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
-    gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
-    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
+    DoStandardWildBattle(FALSE, BATTLE_TYPE_WALLY_TUTORIAL, CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
 
 void BattleSetup_StartScriptedWildBattle(void)
 {
     ScriptContext2_Enable();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = 0;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    IncrementDailyWildBattles();
-    TryUpdateGymLeaderRematchFromWild();
+    DoStandardWildBattle(FALSE, 0, CB2_EndScriptedWildBattle);
 }
 
 void BattleSetup_StartScriptedDoubleWildBattle(void)
@@ -566,61 +546,18 @@ void BattleSetup_StartLegendaryBattle(void) //These were commented out temponair
 {
     ScriptContext2_Enable();
 	DoStandardWildBattle(FALSE, BATTLE_TYPE_LEGENDARY, CB2_EndScriptedWildBattle);
-// restore code here if shit breaks
-//    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-//    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-//    IncrementDailyWildBattles();
-//    TryUpdateGymLeaderRematchFromWild();
 }
 
 void StartGroudonKyogreBattle(void)
 {
     ScriptContext2_Enable();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON;
-
-    if (gGameVersion == VERSION_RUBY)
-        CreateBattleStartTask(B_TRANSITION_SHARDS, MUS_VS_KYOGRE_GROUDON); // GROUDON
-    else
-        CreateBattleStartTask(B_TRANSITION_RIPPLE, MUS_VS_KYOGRE_GROUDON); // KYOGRE
-
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    IncrementDailyWildBattles();
-    TryUpdateGymLeaderRematchFromWild();
+	DoStandardWildBattle(FALSE, BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_KYOGRE_GROUDON, CB2_EndScriptedWildBattle);
 }
 
 void StartRegiBattle(void)
 {
-    u8 transitionId;
-    u16 species;
-
     ScriptContext2_Enable();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI;
-
-    species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
-    switch (species)
-    {
-    case SPECIES_REGIROCK:
-        transitionId = B_TRANSITION_REGIROCK;
-        break;
-    case SPECIES_REGICE:
-        transitionId = B_TRANSITION_REGICE;
-        break;
-    case SPECIES_REGISTEEL:
-        transitionId = B_TRANSITION_REGISTEEL;
-        break;
-    default:
-        transitionId = B_TRANSITION_GRID_SQUARES;
-        break;
-    }
-    CreateBattleStartTask(transitionId, MUS_VS_REGI);
-
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    IncrementDailyWildBattles();
-    TryUpdateGymLeaderRematchFromWild();
+	DoStandardWildBattle(FALSE, BATTLE_TYPE_LEGENDARY | BATTLE_TYPE_REGI, CB2_EndScriptedWildBattle);
 }
 
 static void CB2_EndWildBattle(void)
@@ -1477,6 +1414,9 @@ void PlayTrainerEncounterMusic(void)
         trainerId = gTrainerBattleOpponent_A;
     else
         trainerId = gTrainerBattleOpponent_B;
+
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
 
     if (sTrainerBattleMode != TRAINER_BATTLE_CONTINUE_SCRIPT_NO_MUSIC
         && sTrainerBattleMode != TRAINER_BATTLE_CONTINUE_SCRIPT_DOUBLE_NO_MUSIC)

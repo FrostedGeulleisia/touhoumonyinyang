@@ -30,7 +30,7 @@ else
 EXE :=
 endif
 
-TITLE       := POKEMON EMER
+TITLE       := TOUHOUMON YI
 GAME_CODE   := BPEE
 MAKER_CODE  := 01
 REVISION    := 0
@@ -87,6 +87,9 @@ MID_BUILDDIR = $(OBJ_DIR)/$(MID_SUBDIR)
 
 ASFLAGS := -mcpu=arm7tdmi --defsym MODERN=$(MODERN)
 
+GITHUB_SHA = $(git rev-parse HEAD | head -c7)
+CPPFLAGS += -DGITHUB_SHA=$(GITHUB_SHA)
+
 ifeq ($(MODERN),0)
 CC1             := tools/agbcc/bin/agbcc$(EXE)
 override CFLAGS += -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -g
@@ -120,6 +123,7 @@ RAMSCRGEN := tools/ramscrgen/ramscrgen$(EXE)
 FIX := tools/gbafix/gbafix$(EXE)
 MAPJSON := tools/mapjson/mapjson$(EXE)
 JSONPROC := tools/jsonproc/jsonproc$(EXE)
+COPYSTAMP := tools/copystamp/copystamp
 
 TOOLDIRS := $(filter-out tools/agbcc tools/binutils,$(wildcard tools/*))
 TOOLBASE = $(TOOLDIRS:tools/%=%)
@@ -252,6 +256,11 @@ $(CRY_SUBDIR)/uncomp_%.bin: $(CRY_SUBDIR)/uncomp_%.aif ; $(AIF) $< $@
 $(CRY_SUBDIR)/%.bin: $(CRY_SUBDIR)/%.aif ; $(AIF) $< $@ --compress
 sound/%.bin: sound/%.aif ; $(AIF) $< $@
 
+$(OBJ_DIR)/copystamp.bin: .git/index
+	tools/copystamp/copystamp $(OBJ_DIR)/copystamped.bin `git log -1 --format="-18:s %h -19:t %ct"`
+$(OBJ_DIR)/copystamped.bin.lz: $(OBJ_DIR)/copystamp.bin
+	$(GFX) $(OBJ_DIR)/copystamped.bin $@
+
 
 ifeq ($(MODERN),0)
 $(C_BUILDDIR)/libc.o: CC1 := tools/agbcc/bin/old_agbcc$(EXE)
@@ -266,6 +275,7 @@ $(C_BUILDDIR)/agb_flash_mx.o: CFLAGS := -O -mthumb-interwork
 $(C_BUILDDIR)/m4a.o: CC1 := tools/agbcc/bin/old_agbcc$(EXE)
 
 $(C_BUILDDIR)/record_mixing.o: CFLAGS += -ffreestanding
+$(C_BUILDDIR)/graphics.o: $(OBJ_DIR)/copystamped.bin.lz
 $(C_BUILDDIR)/librfu_intr.o: CC1 := tools/agbcc/bin/agbcc_arm$(EXE)
 $(C_BUILDDIR)/librfu_intr.o: CFLAGS := -O2 -mthumb-interwork -quiet
 else

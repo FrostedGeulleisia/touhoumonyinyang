@@ -1145,6 +1145,9 @@ void Overworld_PlaySpecialMapMusic(void)
 {
     u16 music = GetCurrLocationDefaultMusic();
 
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
+
     if (music != MUS_ABNORMAL_WEATHER && music != MUS_NONE)
     {
         if (gSaveBlock1Ptr->savedMusic)
@@ -1195,14 +1198,18 @@ static void TransitionMapMusic(void)
 void Overworld_ChangeMusicToDefault(void)
 {
     u16 currentMusic = GetCurrentMapMusic();
-    if (currentMusic != GetCurrLocationDefaultMusic())
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
+    else if (currentMusic != GetCurrLocationDefaultMusic())
         FadeOutAndPlayNewMapMusic(GetCurrLocationDefaultMusic(), 8);
 }
 
 void Overworld_ChangeMusicTo(u16 newMusic)
 {
     u16 currentMusic = GetCurrentMapMusic();
-    if (currentMusic != newMusic && currentMusic != MUS_ABNORMAL_WEATHER)
+	if (FlagGet(FLAG_DONT_TRANSITION_MUSIC))
+		return;
+    else if (currentMusic != newMusic && currentMusic != MUS_ABNORMAL_WEATHER)
         FadeOutAndPlayNewMapMusic(newMusic, 8);
 }
 
@@ -1219,7 +1226,7 @@ void TryFadeOutOldMapMusic(void)
 {
     u16 currentMusic = GetCurrentMapMusic();
     u16 warpMusic = GetWarpDestinationMusic();
-    if (FlagGet(FLAG_DONT_TRANSITION_MUSIC) != TRUE && warpMusic != GetCurrentMapMusic())
+    if (FlagGet(FLAG_DONT_TRANSITION_MUSIC) != TRUE) //&& warpMusic != GetCurrentMapMusic())
     {
         if (currentMusic == MUS_RG_SURF
             && VarGet(VAR_SKY_PILLAR_STATE) == 2
