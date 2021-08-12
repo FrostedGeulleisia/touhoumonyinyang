@@ -628,10 +628,100 @@ $(MID_SUBDIR)/mus_vs_mew.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G116 -V090
 
 $(MID_SUBDIR)/mus_scratchpad.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
 
 $(MID_SUBDIR)/mus_encounter_hiker.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G097 -V076
+	$(MID) $< $@ -E -R$(STD_REVERB) -G097 -V080
+	
+$(MID_SUBDIR)/mus_battle_dummy01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy02.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy03.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy04.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy05.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy06.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy07.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy08.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy09.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy10.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+
+$(MID_SUBDIR)/mus_battle_dummy11.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy12.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy13.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy14.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy15.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy16.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy17.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy18.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy19.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V090 -P1
+	
+$(MID_SUBDIR)/mus_battle_dummy20.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V090 -P1
+
+$(MID_SUBDIR)/mus_field_dummy01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G187 -V080
+	
+$(MID_SUBDIR)/mus_field_dummy02.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G187 -V080
+	
+$(MID_SUBDIR)/mus_field_dummy03.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G187 -V080
+	
+$(MID_SUBDIR)/mus_field_dummy04.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G159 -V100
+	
+$(MID_SUBDIR)/mus_field_dummy05.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G159 -V100
+	
+$(MID_SUBDIR)/mus_dungeon_dummy01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G133 -V080
+	
+$(MID_SUBDIR)/mus_dungeon_dummy02.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G133 -V080
+	
+$(MID_SUBDIR)/mus_dungeon_dummy03.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G133 -V080
+	
+$(MID_SUBDIR)/mus_dungeon_dummy04.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G133 -V080
+	
+$(MID_SUBDIR)/mus_dungeon_dummy05.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G133 -V080
 
 $(MID_SUBDIR)/ph_choice_blend.s: %.s: %.mid
 	$(MID) $< $@ -E -G130 -P4
