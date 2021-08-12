@@ -560,6 +560,36 @@ gSongTable::
 	song mus_vs_trainer_wld, 0, 0
 	song mus_rg_slow_pallet, 0, 0
 	song mus_rg_teachy_tv_menu, 0, 0
+	song mus_battle_dummy01, 0, 0
+	song mus_battle_dummy02, 0, 0
+	song mus_battle_dummy03, 0, 0
+	song mus_battle_dummy04, 0, 0
+	song mus_battle_dummy05, 0, 0
+	song mus_battle_dummy06, 0, 0
+	song mus_battle_dummy07, 0, 0
+	song mus_battle_dummy08, 0, 0
+	song mus_battle_dummy09, 0, 0
+	song mus_battle_dummy10, 0, 0
+	song mus_battle_dummy11, 0, 0
+	song mus_battle_dummy12, 0, 0
+	song mus_battle_dummy13, 0, 0
+	song mus_battle_dummy14, 0, 0
+	song mus_battle_dummy15, 0, 0
+	song mus_battle_dummy16, 0, 0
+	song mus_battle_dummy17, 0, 0
+	song mus_battle_dummy18, 0, 0
+	song mus_battle_dummy19, 0, 0
+	song mus_battle_dummy20, 0, 0
+	song mus_field_dummy01, 0, 0
+	song mus_field_dummy02, 0, 0
+	song mus_field_dummy03, 0, 0
+	song mus_field_dummy04, 0, 0
+	song mus_field_dummy05, 0, 0
+	song mus_dungeon_dummy01, 0, 0
+	song mus_dungeon_dummy02, 0, 0
+	song mus_dungeon_dummy03, 0, 0
+	song mus_dungeon_dummy04, 0, 0
+	song mus_dungeon_dummy05, 0, 0
 	song ph_trap_blend, 2, 2
 	song ph_trap_held, 2, 2
 	song ph_trap_solo, 2, 2
