@@ -108,10 +108,9 @@ struct FrontierMapData
     struct Sprite *playerHeadSprite;
     struct Sprite *mapIndicatorSprite;
     u8 cursorPos;
-    u8 unused;
-    u8 tilemapBuff0[0x1000];
-    u8 tilemapBuff1[0x1000];
-    u8 tilemapBuff2[0x1000];
+    s16 tilemapBuff0[0x800];
+    s16 tilemapBuff1[0x800];
+    s16 tilemapBuff2[0x800];
 };
 
 static EWRAM_DATA struct FrontierPassData *sPassData = NULL;
