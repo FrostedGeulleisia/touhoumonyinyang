@@ -123,7 +123,7 @@ static void CB2_LinkTest(void);
 static void ProcessRecvCmds(u8 unused);
 static void LinkCB_SendHeldKeys(void);
 static void ResetBlockSend(void);
-static bool32 InitBlockSend(const void *src, size_t size);
+static bool8 InitBlockSend(const void *src, size_t size);
 static void LinkCB_BlockSendBegin(void);
 static void LinkCB_BlockSend(void);
 static void LinkCB_BlockSendEnd(void);
@@ -936,7 +936,7 @@ static void ResetBlockSend(void)
     sBlockSend.src = NULL;
 }
 
-static bool32 InitBlockSend(const void *src, size_t size)
+static bool8 InitBlockSend(const void *src, size_t size)
 {
     if (sBlockSend.active)
     {
@@ -980,7 +980,7 @@ static void LinkCB_BlockSend(void)
     {
         gSendCmd[i + 1] = (src[sBlockSend.pos + i * 2 + 1] << 8) | src[sBlockSend.pos + i * 2];
     }
-    sBlockSend.pos += 14;
+    sBlockSend.pos += (CMD_LENGTH - 1) * 2;
     if (sBlockSend.size <= sBlockSend.pos)
     {
         sBlockSend.active = FALSE;
@@ -1332,13 +1332,13 @@ bool8 DoesLinkPlayerCountMatchSaved(void)
 
 void ClearSavedLinkPlayers(void)
 {
-    int i;
     // The CpuSet loop below is incorrectly writing to NULL
     // instead of sSavedLinkPlayers.
     // Additionally it's using the wrong array size.
 #ifdef UBFIX
     memset(sSavedLinkPlayers, 0, sizeof(sSavedLinkPlayers));
 #else
+    int i;
     for (i = 0; i < MAX_LINK_PLAYERS; i++)
         CpuSet(&sSavedLinkPlayers[i], NULL, sizeof(struct LinkPlayer));
 #endif
@@ -1726,8 +1726,6 @@ static void CB2_PrintErrorMessage(void)
     if (gMain.state != 160)
         gMain.state++;
 }
-
-// TODO: there might be a file boundary here, let's name it
 
 bool8 GetSioMultiSI(void)
 {

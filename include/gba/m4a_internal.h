@@ -171,7 +171,7 @@ struct SoundChannel
 struct MusicPlayerInfo;
 
 typedef void (*MPlayFunc)();
-typedef void (*PlyNoteFunc)(u32, struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+typedef void (*PlyNoteFunc)(u8, struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 typedef void (*CgbSoundFunc)(void);
 typedef void (*CgbOscOffFunc)(u8);
 typedef u32 (*MidiKeyToCgbFreqFunc)(u8, u8, u8);
@@ -275,7 +275,7 @@ struct MusicPlayerTrack
     u8 key;
     u8 velocity;
     u8 runningStatus;
-    u8 keyM;
+    s8 keyM;
     u8 pitM;
     s8 keyShift;
     s8 keyShiftX;
@@ -475,7 +475,7 @@ void ply_tune(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_port(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_xcmd(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_endtie(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
-void ply_note(u32 note_cmd, struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_note(u8 note_cmd, struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 
 // extended sound command handler functions
 void ply_xxx(struct MusicPlayerInfo *, struct MusicPlayerTrack *);

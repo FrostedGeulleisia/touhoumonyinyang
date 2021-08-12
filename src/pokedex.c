@@ -4587,17 +4587,15 @@ static u16 GetNextPosition(u8 direction, u16 position, u16 min, u16 max)
 // All others use personality 0
 static u32 GetPokedexMonPersonality(u16 species)
 {
-    if (species == SPECIES_UNOWN || species == SPECIES_SPINDA)
-    {
-        if (species == SPECIES_UNOWN)
-            return gSaveBlock2Ptr->pokedex.unownPersonality;
-        else
-            return gSaveBlock2Ptr->pokedex.spindaPersonality;
-    }
-    else
-    {
-        return 0xFF; //Changed from 0 to make it so the Pokédex shows the default mon pics instead of the female versions.
-    }
+    switch (species)
+     {
+     case SPECIES_SPINDA:
+         return gSaveBlock2Ptr->pokedex.spindaPersonality;
+     case SPECIES_UNOWN:
+         return gSaveBlock2Ptr->pokedex.unownPersonality;
+     default:
+         return 0xFF; // Changed from 0 to make it so the Pokédex shows the default mon pics instead of the female versions.
+     }
 }
 
 u16 CreateMonSpriteFromNationalDexNumber(u16 nationalNum, s16 x, s16 y, u16 paletteSlot)

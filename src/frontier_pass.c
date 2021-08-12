@@ -120,8 +120,8 @@ struct FrontierPassGfx
     bool8 zooming;
     s16 scaleX;
     s16 scaleY;
-    u8 tilemapBuff1[BG_SCREEN_SIZE * 2];
-    u8 tilemapBuff2[BG_SCREEN_SIZE * 2];
+    u16 tilemapBuff1[BG_SCREEN_SIZE];
+    u16 tilemapBuff2[BG_SCREEN_SIZE];
     u8 tilemapBuff3[BG_SCREEN_SIZE / 2];
 };
 
@@ -139,10 +139,9 @@ struct FrontierMapData
     struct Sprite *playerHeadSprite;
     struct Sprite *mapIndicatorSprite;
     u8 cursorPos;
-    u8 unused;
-    u8 tilemapBuff0[BG_SCREEN_SIZE * 2];
-    u8 tilemapBuff1[BG_SCREEN_SIZE * 2];
-    u8 tilemapBuff2[BG_SCREEN_SIZE * 2];
+    s16 tilemapBuff0[0x800];
+    s16 tilemapBuff1[0x800];
+    s16 tilemapBuff2[0x800];
 };
 
 static EWRAM_DATA struct FrontierPassData *sPassData = NULL;

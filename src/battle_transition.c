@@ -1323,11 +1323,7 @@ static bool8 Phase2_BigPokeball_Func1(struct Task *task)
     return FALSE;
 }
 
-#define SOME_VRAM_STORE(ptr, posY, posX, toStore)                       \
-{                                                                       \
-    u32 index = (posY) * 32 + posX;                                     \
-    ptr[index] = toStore;                                               \
-}
+#define SOME_VRAM_STORE(ptr, posY, posX, toStore) ptr[((posY) << 5) + (posX)] = toStore
 
 static bool8 Phase2_BigPokeball_Func2(struct Task *task)
 {
@@ -1699,12 +1695,12 @@ static void sub_814713C(struct Sprite *sprite)
 
             if (posX != sprite->data[2])
             {
-                u32 var;
+                u16 var;
                 u16 *ptr;
 
                 sprite->data[2] = posX;
-                var = (((REG_BG0CNT >> 8) & 0x1F) << 11);
-                ptr = (u16 *)(VRAM + var);
+                var = ((REG_BG0CNT >> 8) & 0x1F);
+                ptr = (u16 *)(BG_VRAM + (var << 11));
 
                 SOME_VRAM_STORE(ptr, posY - 2, posX, 0xF001);
                 SOME_VRAM_STORE(ptr, posY - 1, posX, 0xF001);
@@ -2947,6 +2943,8 @@ static bool8 Phase2_RectangularSpiral_Func2(struct Task *task)
     u16 *tilemap, *tileset;
     u8 i;
     u16 j;
+
+    s16 var, var1, var2;
     bool32 done = TRUE;
 
     GetBg0TilesDst(&tilemap, &tileset);
@@ -2955,9 +2953,6 @@ static bool8 Phase2_RectangularSpiral_Func2(struct Task *task)
     {
         for (j = 0; j < ARRAY_COUNT(sRectangularSpiralTransition); j++)
         {
-            s16 var = 0, var2 = 0;
-            s32 var3 = 0;
-
             if (sub_8149048(gUnknown_085C8D38[j / 2], &sRectangularSpiralTransition[j]))
             {
                 done = FALSE;
@@ -2965,10 +2960,10 @@ static bool8 Phase2_RectangularSpiral_Func2(struct Task *task)
                 if ((j % 2) == 1)
                     var = 0x27D - var;
 
-                var2 = var % 32;
-                var3 = var / 32;
+                var1 = var % 32;
+                var2 = var / 32;
 
-                SOME_VRAM_STORE(tilemap, var3, var2, 0xF002);
+                SOME_VRAM_STORE(tilemap, var2, var1, 0xF002);
             }
         }
     }
@@ -3226,7 +3221,7 @@ static bool8 Phase2_Rayquaza_Func9(struct Task *task)
 
 static void VBlankCB_Phase2_Rayquaza(void)
 {
-    void *dmaSrc;
+    u16 *dmaSrc;
 
     DmaStop(0);
     VBlankCB_BattleTransition();
@@ -3309,8 +3304,8 @@ static bool8 Phase2_WhiteFade_Func4(struct Task *task)
     sTransitionStructPtr->VBlank_DMA = 0;
 
     DmaStop(0);
-    SetVBlankCallback(0);
-    SetHBlankCallback(0);
+    SetVBlankCallback(NULL);
+    SetHBlankCallback(NULL);
 
     sTransitionStructPtr->WIN0H = DISPLAY_WIDTH;
     sTransitionStructPtr->BLDY = 0;
@@ -3687,7 +3682,7 @@ static void GetBg0TilemapDst(u16 **tileset)
 {
     u16 charBase = REG_BG0CNT >> 2;
     charBase <<= 0xE;
-    *tileset = (u16*)(VRAM + charBase);
+    *tileset = (u16*)(BG_VRAM + charBase);
 }
 
 void GetBg0TilesDst(u16 **tilemap, u16 **tileset)

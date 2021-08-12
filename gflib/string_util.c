@@ -545,12 +545,10 @@ u8 *StringCopyPadded(u8 *dest, const u8 *src, u8 c, u16 n)
             n--;
     }
 
-    n--;
 
-    while (n != (u16)-1)
+    while (n--)
     {
         *dest++ = c;
-        n--;
     }
 
     *dest = EOS;
@@ -564,9 +562,7 @@ u8 *StringFillWithTerminator(u8 *dest, u16 n)
 
 u8 *StringCopyN_Multibyte(u8 *dest, u8 *src, u32 n)
 {
-    u32 i;
-
-    for (i = n - 1; i != (u32)-1; i--)
+    while(n--)
     {
         if (*src == EOS)
         {
@@ -748,12 +744,9 @@ void ConvertInternationalString(u8 *s, u8 language)
         s[i++] = EXT_CTRL_CODE_ENG;
         s[i++] = EOS;
 
-        i--;
-
-        while (i != (u8)-1)
+        while (i--)
         {
             s[i + 2] = s[i];
-            i--;
         }
 
         s[0] = EXT_CTRL_CODE_BEGIN;
