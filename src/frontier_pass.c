@@ -84,13 +84,13 @@ struct FrontierPassGfx
     struct Sprite *cursorSprite;
     struct Sprite *symbolSprites[NUM_FRONTIER_FACILITIES];
     u8 *unk20;
-    u8 *unk24;
-    u8 *unk28;
+    u16 *unk24;
+    u16 *unk28;
     bool8 setAffine;
     s16 unk2E;
     s16 unk30;
-    u8 tilemapBuff1[0x1000];
-    u8 tilemapBuff2[0x1000];
+    u16 tilemapBuff1[0x800];
+    u16 tilemapBuff2[0x800];
     u8 tilemapBuff3[0x400];
 };
 
