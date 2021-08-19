@@ -6633,11 +6633,6 @@ u8 GetMoveTarget(u16 move, u8 setTarget)
     return targetBattler;
 }
 
-static bool32 IsMonEventLegal(u8 battlerId)
-{
-    return TRUE;
-}
-
 u8 IsMonDisobedient(void)
 {
     s32 rnd;
@@ -6649,36 +6644,34 @@ u8 IsMonDisobedient(void)
     if (GetBattlerSide(gBattlerAttacker) == B_SIDE_OPPONENT)
         return 0;
 
-    if (IsMonEventLegal(gBattlerAttacker)) // only false if illegal Mew or Deoxys
-    {
-        if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && GetBattlerPosition(gBattlerAttacker) == 2)
-            return 0;
-        if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
-            return 0;
-        if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
-            return 0;
-        if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
-            return 0;
-        if (FlagGet(FLAG_BADGE08_GET))
-            return 0;
+    if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER && GetBattlerPosition(gBattlerAttacker) == 2)
+        return 0;
+    if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+        return 0;
+    if (gBattleTypeFlags & BATTLE_TYPE_RECORDED)
+        return 0;
+    if (!IsOtherTrainer(gBattleMons[gBattlerAttacker].otId, gBattleMons[gBattlerAttacker].otName))
+        return 0;
+    if (FlagGet(FLAG_BADGE08_GET))
+        return 0;
 
+    obedienceLevel = 10;
+    if (FlagGet(FLAG_BADGE07_GET))
+        obedienceLevel = 80;
+    else if (FlagGet(FLAG_BADGE06_GET))
+        obedienceLevel = 70;
+    else if (FlagGet(FLAG_BADGE05_GET))
+        obedienceLevel = 60;
+    else if (FlagGet(FLAG_BADGE04_GET))
+        obedienceLevel = 50;
+    else if (FlagGet(FLAG_BADGE03_GET))
+        obedienceLevel = 40;
+    else if (FlagGet(FLAG_BADGE02_GET))
+        obedienceLevel = 30;
+    else if (FlagGet(FLAG_BADGE01_GET))
+        obedienceLevel = 20;
+    else
         obedienceLevel = 10;
-
-        if (FlagGet(FLAG_BADGE01_GET))
-            obedienceLevel = 20;
-        if (FlagGet(FLAG_BADGE02_GET))
-            obedienceLevel = 30;
-        if (FlagGet(FLAG_BADGE03_GET))
-            obedienceLevel = 40;
-        if (FlagGet(FLAG_BADGE04_GET))
-            obedienceLevel = 50;
-        if (FlagGet(FLAG_BADGE05_GET))
-            obedienceLevel = 60;
-        if (FlagGet(FLAG_BADGE06_GET))
-            obedienceLevel = 70;
-        if (FlagGet(FLAG_BADGE07_GET))
-            obedienceLevel = 80;
-    }
 
     if (gBattleMons[gBattlerAttacker].level <= obedienceLevel)
         return 0;
