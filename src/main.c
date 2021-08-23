@@ -56,9 +56,7 @@ const IntrFunc gIntrTableTemplate[] =
     IntrDummy,  // Game Pak interrupt
 };
 
-#define INTR_COUNT ((int)(sizeof(gIntrTableTemplate)/sizeof(IntrFunc)))
-
-static u16 gUnknown_03000000;
+#define INTR_COUNT (sizeof(gIntrTableTemplate)/sizeof(IntrFunc))
 
 u16 gKeyRepeatStartDelay;
 bool8 gLinkTransferringData;
@@ -116,7 +114,6 @@ void AgbMain()
         SetMainCallback2(NULL);
 
     gLinkTransferringData = FALSE;
-    gUnknown_03000000 = 0xFC0;
 
     for (;;)
     {
@@ -281,7 +278,7 @@ static void ReadKeys(void)
 
 void InitIntrHandlers(void)
 {
-    int i;
+    u32 i;
 
     for (i = 0; i < INTR_COUNT; i++)
         gIntrTable[i] = gIntrTableTemplate[i];

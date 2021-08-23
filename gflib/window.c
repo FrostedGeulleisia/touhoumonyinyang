@@ -10,7 +10,6 @@ u32 gUnusedWindowVar2;
 u8 gTransparentTileNumber;
 u32 gUnusedWindowVar3;
 void *gWindowBgTilemapBuffers[NUM_BACKGROUNDS];
-extern u32 gUnneededFireRedVariable;
 
 #define WINDOWS_MAX  32
 
@@ -53,12 +52,6 @@ bool16 InitWindows(const struct WindowTemplate *templates)
 
     for (i = 0, allocatedBaseBlock = 0, bgLayer = templates[i].bg; bgLayer != 0xFF && i < WINDOWS_MAX; ++i, bgLayer = templates[i].bg)
     {
-        if (gUnneededFireRedVariable == 1)
-        {
-            allocatedBaseBlock = DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, 0, templates[i].width * templates[i].height, 0);
-            if (allocatedBaseBlock == -1)
-                return FALSE;
-        }
 
         if (gWindowBgTilemapBuffers[bgLayer] == NULL)
         {
@@ -98,11 +91,6 @@ bool16 InitWindows(const struct WindowTemplate *templates)
         gWindows[i].tileData = allocatedTilemapBuffer;
         gWindows[i].window = templates[i];
 
-        if (gUnneededFireRedVariable == 1)
-        {
-            gWindows[i].window.baseBlock = allocatedBaseBlock;
-            DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, allocatedBaseBlock, templates[i].width * templates[i].height, 1);
-        }
     }
 
     gTransparentTileNumber = 0;
@@ -113,7 +101,6 @@ u16 AddWindow(const struct WindowTemplate *template)
 {
     u16 win;
     u8 bgLayer;
-    int allocatedBaseBlock;
     u16 attrib;
     u8 *allocatedTilemapBuffer;
     int i;
@@ -128,15 +115,6 @@ u16 AddWindow(const struct WindowTemplate *template)
         return WINDOW_NONE;
 
     bgLayer = template->bg;
-    allocatedBaseBlock = 0;
-
-    if (gUnneededFireRedVariable == 1)
-    {
-        allocatedBaseBlock = DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, 0, template->width * template->height, 0);
-
-        if (allocatedBaseBlock == -1)
-            return WINDOW_NONE;
-    }
 
     if (gWindowBgTilemapBuffers[bgLayer] == NULL)
     {
@@ -172,12 +150,6 @@ u16 AddWindow(const struct WindowTemplate *template)
     gWindows[win].tileData = allocatedTilemapBuffer;
     gWindows[win].window = *template;
 
-    if (gUnneededFireRedVariable == 1)
-    {
-        gWindows[win].window.baseBlock = allocatedBaseBlock;
-        DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, allocatedBaseBlock, gWindows[win].window.width * gWindows[win].window.height, 1);
-    }
-
     return win;
 }
 
@@ -199,21 +171,7 @@ u16 AddWindowWithoutTileMap(const struct WindowTemplate *template)
     bgLayer = template->bg;
     allocatedBaseBlock = 0;
 
-    if (gUnneededFireRedVariable == 1)
-    {
-        allocatedBaseBlock = DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, 0, template->width * template->height, 0);
-
-        if (allocatedBaseBlock == -1)
-            return WINDOW_NONE;
-    }
-
     gWindows[win].window = *template;
-
-    if (gUnneededFireRedVariable == 1)
-    {
-        gWindows[win].window.baseBlock = allocatedBaseBlock;
-        DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, allocatedBaseBlock, gWindows[win].window.width * gWindows[win].window.height, 1);
-    }
 
     return win;
 }
@@ -221,11 +179,6 @@ u16 AddWindowWithoutTileMap(const struct WindowTemplate *template)
 void RemoveWindow(u8 windowId)
 {
     u8 bgLayer = gWindows[windowId].window.bg;
-
-    if (gUnneededFireRedVariable == 1)
-    {
-        DummiedOutFireRedLeafGreenTileAllocFunc(bgLayer, gWindows[windowId].window.baseBlock, gWindows[windowId].window.width * gWindows[windowId].window.height, 2);
-    }
 
     gWindows[windowId].window = sDummyWindowTemplate;
 

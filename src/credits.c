@@ -363,7 +363,7 @@ static void CB2_Credits(void)
 
 static void InitCreditsBgsAndWindows(void)
 {
-    ResetBgsAndClearDma3BusyFlags(0);
+    ResetBgsAndClearDma3BusyFlags();
     InitBgsFromTemplates(0, sBackgroundTemplates, ARRAY_COUNT(sBackgroundTemplates));
     SetBgTilemapBuffer(0, AllocZeroed(BG_SCREEN_SIZE));
     LoadPalette(sCredits_Pal, 0x80, 64);

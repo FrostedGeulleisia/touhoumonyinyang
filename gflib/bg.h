@@ -44,7 +44,7 @@ u8 LoadBgVram(u8 bg, const void *src, u16 size, u16 destOffset, u8 mode);
 void SetTextModeAndHideBgs(void);
 bool8 IsInvalidBg(u8 bg);
 int DummiedOutFireRedLeafGreenTileAllocFunc(int a1, int a2, int a3, int a4);
-void ResetBgsAndClearDma3BusyFlags(u32 leftoverFireRedLeafGreenVariable);
+void ResetBgsAndClearDma3BusyFlags();
 void InitBgsFromTemplates(u8 bgMode, const struct BgTemplate *templates, u8 numTemplates);
 void InitBgFromTemplate(const struct BgTemplate *template);
 void SetBgMode(u8 bgMode);

@@ -336,7 +336,7 @@ static void InitTradeMenu(void)
     SetVBlankCallback(VBlankCB_TradeMenu);
     LoadPalette(gUnknown_0860F074, 0xF0, 20);
     LoadPalette(gUnknown_0860F074, 0xD0, 20);
-    ResetBgsAndClearDma3BusyFlags(0);
+    ResetBgsAndClearDma3BusyFlags();
     InitBgsFromTemplates(0, sTradeMenuBgTemplates, ARRAY_COUNT(sTradeMenuBgTemplates));
     SetBgTilemapBuffer(1, sTradeMenuData->tilemapBuffer);
 
@@ -2859,7 +2859,7 @@ void LinkTradeDrawWindow(void)
 static void InitTradeBgInternal(void)
 {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
-    ResetBgsAndClearDma3BusyFlags(0);
+    ResetBgsAndClearDma3BusyFlags();
     InitBgsFromTemplates(0, sTradeSequenceBgTemplates, ARRAY_COUNT(sTradeSequenceBgTemplates));
     ChangeBgX(0, 0, 0);
     ChangeBgY(0, 0, 0);

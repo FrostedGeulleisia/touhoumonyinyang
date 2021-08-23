@@ -293,7 +293,7 @@ int DummiedOutFireRedLeafGreenTileAllocFunc(int a1, int a2, int a3, int a4)
     return 0;
 }
 
-void ResetBgsAndClearDma3BusyFlags(u32 leftoverFireRedLeafGreenVariable)
+void ResetBgsAndClearDma3BusyFlags()
 {
     int i;
     ResetBgs();
@@ -302,8 +302,6 @@ void ResetBgsAndClearDma3BusyFlags(u32 leftoverFireRedLeafGreenVariable)
     {
         sDmaBusyBitfield[i] = 0;
     }
-
-    gUnneededFireRedVariable = leftoverFireRedLeafGreenVariable;
 }
 
 void InitBgsFromTemplates(u8 bgMode, const struct BgTemplate *templates, u8 numTemplates)

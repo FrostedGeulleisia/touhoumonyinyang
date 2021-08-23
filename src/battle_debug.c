@@ -642,7 +642,7 @@ void CB2_BattleDebugMenu(void)
     case 1:
         ResetVramOamAndBgCntRegs();
         SetGpuReg(REG_OFFSET_DISPCNT, 0);
-        ResetBgsAndClearDma3BusyFlags(0);
+        ResetBgsAndClearDma3BusyFlags();
         InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
         ResetAllBgsCoordinates();
         FreeAllWindowBuffers();

@@ -2976,7 +2976,7 @@ static void Task_ShowTourneyInfoCard(u8 taskId)
         SetVBlankCallback(NULL);
         EnableInterrupts(INTR_FLAG_VBLANK);
         CpuFill32(0, (void *)VRAM, VRAM_SIZE);
-        ResetBgsAndClearDma3BusyFlags(0);
+        ResetBgsAndClearDma3BusyFlags();
         InitBgsFromTemplates(0, sInfoCardBgTemplates, ARRAY_COUNT(sInfoCardBgTemplates));
         InitWindows(sInfoCardWindowTemplates);
         DeactivateAllTextPrinters();
@@ -5254,7 +5254,7 @@ static void Task_ShowTourneyTree(u8 taskId)
         SetVBlankCallback(NULL);
         EnableInterrupts(INTR_FLAG_HBLANK | INTR_FLAG_VBLANK);
         CpuFill32(0, (void *)VRAM, VRAM_SIZE);
-        ResetBgsAndClearDma3BusyFlags(0);
+        ResetBgsAndClearDma3BusyFlags();
         InitBgsFromTemplates(0, sTourneyTreeBgTemplates, ARRAY_COUNT(sTourneyTreeBgTemplates));
         InitWindows(sTourneyTreeWindowTemplates);
         DeactivateAllTextPrinters();

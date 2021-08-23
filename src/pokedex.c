@@ -2052,7 +2052,7 @@ static bool8 LoadPokedexListPage(u8 page)
         sPokedexView->currentPage = page;
         ResetOtherVideoRegisters(0);
         SetGpuReg(REG_OFFSET_BG2VOFS, sPokedexView->initialVOffset);
-        ResetBgsAndClearDma3BusyFlags(0);
+        ResetBgsAndClearDma3BusyFlags();
         InitBgsFromTemplates(0, sPokedex_BgTemplate, ARRAY_COUNT(sPokedex_BgTemplate));
         SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
         SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
@@ -3177,7 +3177,7 @@ static u8 LoadInfoScreen(struct PokedexListItem* item, u8 monSpriteId)
     gTasks[taskId].data[3] = 0;
     gTasks[taskId].tMonSpriteId = monSpriteId;
     gTasks[taskId].data[5] = 255;
-    ResetBgsAndClearDma3BusyFlags(0);
+    ResetBgsAndClearDma3BusyFlags();
     InitBgsFromTemplates(0, sInfoScreen_BgTemplate, ARRAY_COUNT(sInfoScreen_BgTemplate));
     SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
     SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
@@ -3942,7 +3942,7 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
             gPokedexVBlankCB = gMain.vblankCallback;
             SetVBlankCallback(NULL);
             ResetOtherVideoRegisters(DISPCNT_BG0_ON);
-            ResetBgsAndClearDma3BusyFlags(0);
+            ResetBgsAndClearDma3BusyFlags();
             InitBgsFromTemplates(0, sNewEntryInfoScreen_BgTemplate, ARRAY_COUNT(sNewEntryInfoScreen_BgTemplate));
             SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
             SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));
@@ -4773,7 +4773,7 @@ static void Task_LoadSearchMenu(u8 taskId)
         {
             sPokedexView->currentPage = PAGE_SEARCH;
             ResetOtherVideoRegisters(0);
-            ResetBgsAndClearDma3BusyFlags(0);
+            ResetBgsAndClearDma3BusyFlags();
             InitBgsFromTemplates(0, sSearchMenu_BgTemplate, ARRAY_COUNT(sSearchMenu_BgTemplate));
             SetBgTilemapBuffer(3, AllocZeroed(BG_SCREEN_SIZE));
             SetBgTilemapBuffer(2, AllocZeroed(BG_SCREEN_SIZE));

@@ -1192,7 +1192,7 @@ static bool32 InitSaveWindowAfterLinkBattle(u8 *state)
         ScanlineEffect_Clear();
         break;
     case 2:
-        ResetBgsAndClearDma3BusyFlags(0);
+        ResetBgsAndClearDma3BusyFlags();
         InitBgsFromTemplates(0, sBgTemplates_LinkBattleSave, ARRAY_COUNT(sBgTemplates_LinkBattleSave));
         InitWindows(sWindowTemplates_LinkBattleSave);
         LoadUserWindowBorderGfx_(0, 8, 224);
