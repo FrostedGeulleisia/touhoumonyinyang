@@ -7359,10 +7359,10 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
 
 bool32 IsHMMove2(u16 move)
 {
-    int i = 0;
-    while (sHMMoves[i] != 0xFFFF)
+    u32 i = 0;
+    for (i = 0; sHMMoves[i] != 0xFFFF; i++)
     {
-        if (sHMMoves[i++] == move)
+        if (sHMMoves[i] == move)
             return TRUE;
     }
     return FALSE;
@@ -7453,10 +7453,10 @@ void SetMonPreventsSwitchingString(void)
     BattleStringExpandPlaceholders(gText_PkmnsXPreventsSwitching, gStringVar4);
 }
 
-static s32 GetWildMonTableIdInAlteringCave(u16 species)
+static u32 GetWildMonTableIdInAlteringCave(u16 species)
 {
-    s32 i;
-    for (i = 0; i < (s32) ARRAY_COUNT(sAlteringCaveWildMonHeldItems); i++)
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sAlteringCaveWildMonHeldItems); i++)
         if (sAlteringCaveWildMonHeldItems[i].species == species)
             return i;
     return 0;
@@ -7488,7 +7488,7 @@ void SetWildMonHeldItem(void)
         species = GetMonData(&gEnemyParty[i], MON_DATA_SPECIES, 0);
         if (gMapHeader.mapLayoutId == LAYOUT_ALTERING_CAVE)
         {
-            s32 alteringCaveId = GetWildMonTableIdInAlteringCave(species);
+            u32 alteringCaveId = GetWildMonTableIdInAlteringCave(species);
             if (alteringCaveId != 0)
             {
                 if (rnd < var2)
@@ -7533,11 +7533,8 @@ bool8 IsMonShiny(struct Pokemon *mon)
 
 bool8 IsShinyOtIdPersonality(u32 otId, u32 personality)
 {
-    bool8 retVal = FALSE;
     u32 shinyValue = HIHALF(otId) ^ LOHALF(otId) ^ HIHALF(personality) ^ LOHALF(personality);
-    if (shinyValue < SHINY_ODDS)
-        retVal = TRUE;
-    return retVal;
+    return (shinyValue < SHINY_ODDS);
 }
 
 const u8 *GetTrainerPartnerName(void)
@@ -7591,42 +7588,6 @@ static void Task_PokemonSummaryAnimateAfterDelay(u8 taskId)
     }
 }
 
-void BattleAnimateFrontSprite(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
-{
-        DoMonFrontSpriteAnimation(sprite, species, noCry, arg3 | 0x80);
-}
-
-void DoMonFrontSpriteAnimation(struct Sprite* sprite, u16 species, bool8 noCry, u8 arg3)
-{
-    s8 pan;
-    switch (arg3 & 0x7F)
-    {
-    case 0:
-        pan = -25;
-        break;
-    case 1:
-        pan = 25;
-        break;
-    default:
-        pan = 0;
-        break;
-    }
-    if (arg3 & 0x80)
-    {
-        if (!noCry)
-            PlayCry1(species, pan);
-        sprite->callback = SpriteCallbackDummy;
-    }
-    else
-    {
-        if (!noCry)
-        {
-            PlayCry1(species, pan);
-            sprite->callback = SpriteCallbackDummy;
-        }
-    }
-}
-
 void PokemonSummaryDoMonAnimation(struct Sprite* sprite, u16 species, bool8 oneFrame)
 {
     sprite->callback = SpriteCallbackDummy;
@@ -7637,11 +7598,6 @@ void StopPokemonAnimationDelayTask(void)
     u8 delayTaskId = FindTaskIdByFunc(Task_PokemonSummaryAnimateAfterDelay);
     if (delayTaskId != TASK_NONE)
         DestroyTask(delayTaskId);
-}
-
-void BattleAnimateBackSprite(struct Sprite* sprite, u16 species)
-{
-    sprite->callback = SpriteCallbackDummy;
 }
 
 u8 sub_806EF08(u8 arg0)

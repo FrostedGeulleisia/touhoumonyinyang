@@ -3962,7 +3962,7 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
     switch (*state)
     {
     default:
-        return CreateMonSprite(mon);
+        return CreateMonSprite();
     case 0:
         if (gMain.inBattle)
         {
@@ -4002,7 +4002,7 @@ static void PlayMonCry(void)
     }
 }
 
-static u8 CreateMonSprite(struct Pokemon *unused)
+static u8 CreateMonSprite()
 {
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     u8 spriteId = CreateSprite(&gMultiuseSpriteTemplate, 40, 64, 5);

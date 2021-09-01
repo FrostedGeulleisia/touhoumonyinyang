@@ -626,7 +626,6 @@ static void CB2_EggHatch_1(void)
         if (gSprites[sEggHatchData->eggSpriteID].callback == SpriteCallbackDummy)
         {
             species = GetMonData(&gPlayerParty[sEggHatchData->eggPartyID], MON_DATA_SPECIES);
-            DoMonFrontSpriteAnimation(&gSprites[sEggHatchData->pokeSpriteID], species, FALSE, 1);
             sEggHatchData->CB2_state++;
         }
         break;

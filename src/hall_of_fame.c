@@ -1357,16 +1357,10 @@ static void SpriteCB_GetOnScreenAndAnimate(struct Sprite *sprite)
             sprite->y += 10;
         if (sprite->y > sprite->tDestinationY)
             sprite->y -= 10;
+        return;
     }
-    else
-    {
-        s16 species = sprite->tSpecies;
-
-        if (species == SPECIES_EGG)
-            DoMonFrontSpriteAnimation(sprite, species, TRUE, 3);
-        else
-            DoMonFrontSpriteAnimation(sprite, species, FALSE, 3);
-    }
+    sprite->data[0] = 1;
+    sprite->callback = SpriteCallbackDummy;
 }
 
 #undef tDestinationX

@@ -88,7 +88,6 @@ static void sub_803937C(void);
 static void sub_803939C(void);
 static void SpriteCb_MoveWildMonToRight(struct Sprite *sprite);
 static void SpriteCb_WildMonShowHealthbox(struct Sprite *sprite);
-static void SpriteCb_WildMonAnimate(struct Sprite *sprite);
 static void sub_80398D0(struct Sprite *sprite);
 static void SpriteCB_AnimFaintOpponent(struct Sprite *sprite);
 static void SpriteCb_BlinkVisible(struct Sprite *sprite);
@@ -2497,20 +2496,12 @@ static void SpriteCb_WildMonShowHealthbox(struct Sprite *sprite)
     {
         StartHealthboxSlideIn(sprite->sBattler);
         SetHealthboxSpriteVisible(gHealthboxSpriteIds[sprite->sBattler]);
-        sprite->callback = SpriteCb_WildMonAnimate;
+        sprite->callback = SpriteCallbackDummy_2;
         StartSpriteAnimIfDifferent(sprite, 0);
         if (WILD_DOUBLE_BATTLE)
             BeginNormalPaletteFade((0x10000 << sprite->sBattler) | (0x10000 << BATTLE_PARTNER(sprite->sBattler)), 0, 10, 0, RGB(8, 8, 8));
         else
             BeginNormalPaletteFade((0x10000 << sprite->sBattler), 0, 10, 0, RGB(8, 8, 8));
-    }
-}
-
-static void SpriteCb_WildMonAnimate(struct Sprite *sprite)
-{
-    if (!gPaletteFade.active)
-    {
-        BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, FALSE, 1);
     }
 }
 
@@ -2623,14 +2614,6 @@ void SpriteCb_HideAsMoveTarget(struct Sprite *sprite)
     sprite->invisible = sprite->data[4];
     sprite->data[4] = FALSE;
     sprite->callback = SpriteCallbackDummy_2;
-}
-
-void SpriteCb_OpponentMonFromBall(struct Sprite *sprite)
-{
-    if (sprite->affineAnimEnded)
-    {
-        BattleAnimateFrontSprite(sprite, sprite->sSpeciesId, TRUE, 1);
-    }
 }
 
 // This callback is frequently overwritten by SpriteCB_TrainerSlideIn
@@ -2771,12 +2754,6 @@ static void SpriteCB_BounceEffect(struct Sprite *sprite)
 #undef sAmplitude
 #undef sBouncerSpriteId
 #undef sWhich
-
-void SpriteCb_PlayerMonFromBall(struct Sprite *sprite)
-{
-    if (sprite->affineAnimEnded)
-        BattleAnimateBackSprite(sprite, sprite->sSpeciesId);
-}
 
 void sub_8039E60(struct Sprite *sprite)
 {
