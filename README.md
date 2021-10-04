@@ -1,5 +1,8 @@
 # Touhoumon Yin Yang
 
+## NOTE: THIS PROJECT IS CURRENTLY INACTIVE, I MIGHT COME BACK TO IT AT SOME POINT IN THE FUTURE BUT IT HAS JUST NOT BEEN WORKING OUT THE WAY I WANTED IT TO. CONSIDER IT DEAD UNTIL FURTHER NOTICE
+
+
 *(yes i know this's just a modified pokeemerald readme)*
 
 A Touhoumon-series romhack based on a modified fork of the Pokémon Emerald engine.
